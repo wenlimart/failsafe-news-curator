@@ -68,47 +68,33 @@ def extract_body_text(entry, max_chars: int = 3000) -> str:
     return text[:max_chars] if text else ""
 
 
-def detect_primary_source(entry) -> dict:
+def detect_primary_source(entry, article_url: str = "") -> dict:
     """
-    記事内のリンクから一次ソース候補を検出する。
-    公式ブログ・プレスリリース・政府・学術ドメインを優先する。
-    """
-    primary_domains = {
-        "official_blog": [
-            "openai.com", "anthropic.com", "deepmind.google", "ai.google",
-            "research.google", "huggingface.co", "mistral.ai", "meta.ai",
-            "blogs.microsoft.com", "aws.amazon.com/blogs",
-        ],
-        "press_release": [
-            "prnewswire.com", "businesswire.com", "globenewswire.com",
-            "accesswire.com", "ir.", "investor.",
-        ],
-        "government": [
-            ".gov", ".go.jp", "europa.eu",
-        ],
-        "academic_paper": [
-            "arxiv.org", "openreview.net", "proceedings.mlr.press",
-        ],
-        "sec_filing": [
-            "sec.gov", "edgar.",
-        ],
-    }
+    一次ソース検出。2段階で判定する。
 
+    1. 記事URL自体がPRIMARY_SOURCE_DOMAINSに該当するか（ドメインベース）
+       → 公式ブログ・arXiv等のRSSを追加したときに機能する
+    2. RSSエントリ内のリンクを走査（フォールバック）
+       → メディア記事内に一次ソースリンクが埋め込まれている場合に機能する
+    """
+    from utils import detect_primary_source_by_url
+
+    # ① 記事URL自体を判定
+    result = detect_primary_source_by_url(article_url)
+    if result["detected"]:
+        return result
+
+    # ② RSSエントリ内のリンクを走査（フォールバック）
     links = []
     if hasattr(entry, "links"):
         links = [l.get("href", "") for l in entry.links]
     if hasattr(entry, "link"):
         links.append(entry.link or "")
 
-    for source_type, domains in primary_domains.items():
-        for link in links:
-            for domain in domains:
-                if domain in link:
-                    return {
-                        "detected": True,
-                        "url": link,
-                        "type": source_type,
-                    }
+    for link in links:
+        result = detect_primary_source_by_url(link)
+        if result["detected"]:
+            return result
 
     return {"detected": False, "url": None, "type": "none"}
 
@@ -138,7 +124,8 @@ def fetch_feed(source: dict, settings: dict) -> list[dict]:
         article_id   = str(uuid.uuid4())
         published_at = parse_published_at(entry)
         body_text    = extract_body_text(entry, max_chars)
-        primary_src  = detect_primary_source(entry)
+        article_url  = entry.get("link", "").strip()
+        primary_src  = detect_primary_source(entry, article_url)
 
         article = {
             "article_id":  article_id,
@@ -152,7 +139,7 @@ def fetch_feed(source: dict, settings: dict) -> list[dict]:
             },
             "original": {
                 "title":        entry.get("title", "").strip(),
-                "url":          entry.get("link", "").strip(),
+                "url":          article_url,
                 "published_at": published_at,
                 "body_text":    body_text,
                 "language":     source.get("language", "en"),

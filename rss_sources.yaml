@@ -23,6 +23,30 @@ sources:
     language: "en"
     trust_base: 80
 
+  - name: "OpenAI News"
+    url: "https://openai.com/news/rss.xml"
+    type: "official_blog"
+    language: "en"
+    trust_base: 95
+
+  - name: "Anthropic News"
+    url: "https://www.anthropic.com/news/rss.xml"
+    type: "official_blog"
+    language: "en"
+    trust_base: 95
+
+  - name: "Google AI Blog"
+    url: "https://blog.google/technology/ai/rss/"
+    type: "official_blog"
+    language: "en"
+    trust_base: 90
+
+  - name: "arXiv cs.AI"
+    url: "http://export.arxiv.org/rss/cs.AI"
+    type: "academic_paper"
+    language: "en"
+    trust_base: 85
+
   - name: "AI News Japan"
     url: "https://ainews.jp/feed"
     type: "specialist_media"
