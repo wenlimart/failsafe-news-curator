@@ -227,8 +227,10 @@ def score_freshness(article: dict) -> dict:
             score = 70
         elif hours <= 72:
             score = 40
+        elif hours <= 168:   # 7日以内
+            score = 20
         else:
-            score = 0
+            score = 0        # 7日超は本当に古い
 
         return {
             "score": score,
@@ -270,7 +272,7 @@ def determine_verdict(scores: dict, escalation: dict) -> dict:
     if any([
         risk >= 61,
         trust < 50,
-        freshness == 0,
+        freshness == 0,          # 7日超は停止
         trust_cat == "aggregator_only" and trust < 60,
         escalation["escalated"] and trust < 70,
     ]):
@@ -286,7 +288,7 @@ def determine_verdict(scores: dict, escalation: dict) -> dict:
         trust < 80,
         trust_cat in ("credible_reporting", "aggregator_only"),
         escalation["escalated"],
-        freshness < 70,
+        freshness < 70,          # 48時間超は人間確認
     ]):
         return {
             "status": "human_review",
