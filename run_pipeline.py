@@ -57,6 +57,7 @@ def main():
         ("dedupe_articles",    str(base_dir / "dedupe_articles.py")),
         ("write_log",          str(base_dir / "write_log.py")),
         ("score_articles",     str(base_dir / "score_articles.py")),
+        ("publish_markdown",   str(base_dir / "publish_markdown.py")),
     ]
 
     results = {}

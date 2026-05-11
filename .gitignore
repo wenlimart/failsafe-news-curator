@@ -20,6 +20,11 @@ articles_ready/*
 scored_articles/*
 !scored_articles/.gitkeep
 
+# Publish output (keep index only, ignore drafts and review)
+publish/*
+!publish/.gitkeep
+!publish/index.md
+
 # Logs and review records (keep directory, ignore contents)
 logs/*.log
 logs/*.csv
