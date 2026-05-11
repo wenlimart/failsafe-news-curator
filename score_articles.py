@@ -43,26 +43,47 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ─── リスク強制昇格キーワード ────────────────────────────────
-ESCALATION_KEYWORDS: dict[str, list[str]] = {
+# ─── リスクキーワード（2段階）────────────────────────────────
+# hard: 即blocked候補。法務・規制・金融・政治・医療の核心部分
+HARD_RISK_KEYWORDS: dict[str, list[str]] = {
     "法務・規制": [
         "lawsuit", "court", "sued", "investigation", "regulator",
-        "SEC", "FTC", "EU AI Act", "訴訟", "規制", "調査", "当局",
-    ],
-    "企業行動": [
-        "acquisition", "merger", "layoffs", "bankruptcy",
-        "買収", "合併", "レイオフ", "解雇", "倒産",
+        "SEC", "FTC", "EU AI Act", "訴訟", "規制当局", "調査", "当局",
     ],
     "政治・政策": [
-        "election", "government", "policy", "sanctions",
-        "選挙", "政府", "政策", "制裁",
+        "election", "sanctions", "選挙", "制裁",
     ],
-    "医療": ["medical", "diagnosis", "drug", "health", "医療", "診断", "薬"],
-    "金融": ["stock", "investment", "revenue", "earnings", "株", "投資", "収益", "決算"],
-    "その他高リスク": ["炎上", "差別", "犯罪", "事故", "未成年"],
-    # 注意：security / agent / coalition 等のAI研究用語は除外している
-    # これらはarXiv論文タイトルに頻出するが、実際のリスクではない
+    "金融（核心）": [
+        "stock", "earnings", "株", "決算",
+    ],
+    "医療（核心）": [
+        "diagnosis", "drug", "診断", "薬",
+    ],
+    "その他高リスク": [
+        "炎上", "差別", "犯罪", "事故", "未成年",
+    ],
 }
+
+# soft: human_reviewに回す。AIニュースで日常的に登場する単語
+SOFT_RISK_KEYWORDS: dict[str, list[str]] = {
+    "ビジネス動向": [
+        "acquisition", "merger", "layoffs", "bankruptcy",
+        "revenue", "funding", "investment",
+        "買収", "合併", "レイオフ", "解雇", "倒産", "収益", "投資",
+    ],
+    "政策（一般）": [
+        "government", "policy", "政府", "政策",
+    ],
+    "医療（一般）": [
+        "medical", "health", "healthcare", "医療", "健康",
+    ],
+    "テック動向": [
+        "jobs", "data center", "energy", "chips",
+    ],
+}
+
+# 注意：security / agent / coalition 等のAI研究用語は除外
+# これらはarXiv論文タイトルに頻出するが、実際のリスクではない
 
 # 煽り・断定表現パターン
 EXPRESSION_RISK_PATTERNS = [
@@ -79,18 +100,34 @@ EXPRESSION_RISK_PATTERNS = [
 # ─── ルールベーススコアリング ────────────────────────────────
 
 def check_escalation(text: str) -> dict:
-    """ルールベースでリスク強制昇格キーワードを検出する。"""
-    matched = []
-    category = None
-    for cat, keywords in ESCALATION_KEYWORDS.items():
+    """
+    ルールベースでリスクキーワードを検出する。
+    hard: 即blocked候補（risk=65）
+    soft: human_review推奨（risk=40止まり）
+    """
+    hard_matched, hard_cat = [], None
+    soft_matched, soft_cat = [], None
+
+    for cat, keywords in HARD_RISK_KEYWORDS.items():
         for kw in keywords:
             if kw.lower() in text.lower():
-                matched.append(kw)
-                category = cat
+                hard_matched.append(kw)
+                hard_cat = cat
+
+    for cat, keywords in SOFT_RISK_KEYWORDS.items():
+        for kw in keywords:
+            if kw.lower() in text.lower():
+                soft_matched.append(kw)
+                soft_cat = cat
+
     return {
-        "escalated": len(matched) > 0,
-        "keywords": matched,
-        "category": category,
+        "escalated":      len(hard_matched) > 0,   # 後方互換のため維持
+        "hard_escalated": len(hard_matched) > 0,
+        "soft_escalated": len(soft_matched) > 0 and len(hard_matched) == 0,
+        "keywords":       hard_matched or soft_matched,
+        "hard_keywords":  hard_matched,
+        "soft_keywords":  soft_matched,
+        "category":       hard_cat or soft_cat,
     }
 
 
@@ -180,18 +217,16 @@ def score_trust(article: dict) -> dict:
 
 
 def score_risk(article: dict, escalation: dict) -> dict:
-    """リスクスコア（0〜100、低いほど安全）をルールベースで算出する。"""
-    text = " ".join([
-        article.get("original", {}).get("title", ""),
-        article.get("original", {}).get("body_text", ""),
-    ])
-
-    # 強制昇格
-    if escalation["escalated"]:
+    """リスクスコア（0〜100、低いほど安全）をルールベースで算出する。
+    hard escalation → risk=65（blocked候補）
+    soft escalation → risk=40（human_review候補）
+    """
+    # hard キーワード → 即risk=65
+    if escalation["hard_escalated"]:
         return {
             "score": 65,
             "ai_classification": "high",
-            "reason": f"強制昇格: {escalation['category']} / {escalation['keywords'][:3]}",
+            "reason": f"hard escalation: {escalation['category']} / {escalation['hard_keywords'][:3]}",
         }
 
     # ソースタイプ別ベースリスク
@@ -204,6 +239,15 @@ def score_risk(article: dict, escalation: dict) -> dict:
         "specialist_media": 30,
         "aggregator": 50,
     }.get(src_type, 40)
+
+    # soft キーワード → risk=max(base, 40)
+    if escalation["soft_escalated"]:
+        score = max(base, 40)
+        return {
+            "score": score,
+            "ai_classification": "medium",
+            "reason": f"soft escalation: {escalation['category']} / {escalation['soft_keywords'][:3]}",
+        }
 
     return {
         "score": min(base, 100),
