@@ -60,6 +60,8 @@ ESCALATION_KEYWORDS: dict[str, list[str]] = {
     "医療": ["medical", "diagnosis", "drug", "health", "医療", "診断", "薬"],
     "金融": ["stock", "investment", "revenue", "earnings", "株", "投資", "収益", "決算"],
     "その他高リスク": ["炎上", "差別", "犯罪", "事故", "未成年"],
+    # 注意：security / agent / coalition 等のAI研究用語は除外している
+    # これらはarXiv論文タイトルに頻出するが、実際のリスクではない
 }
 
 # 煽り・断定表現パターン

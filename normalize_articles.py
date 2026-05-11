@@ -37,6 +37,7 @@ log = logging.getLogger(__name__)
 VALID_SOURCE_TYPES = {
     "official_blog", "press_release", "major_media",
     "specialist_media", "aggregator", "unknown",
+    "academic_paper",   # arXiv等の学術論文RSS
 }
 VALID_PRIMARY_TYPES = {
     "official_blog", "press_release", "sec_filing",
