@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment variables / secrets
+.env
+
+# Generated article data (keep directory, ignore contents)
+articles_raw/*
+!articles_raw/.gitkeep
+
+articles_normalized/*
+!articles_normalized/.gitkeep
+
+articles_ready/*
+!articles_ready/.gitkeep
+
+scored_articles/*
+!scored_articles/.gitkeep
+
+# Logs and review records (keep directory, ignore contents)
+logs/*.log
+logs/*.csv
+!logs/.gitkeep
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

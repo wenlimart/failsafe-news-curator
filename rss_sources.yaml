@@ -1,0 +1,36 @@
+sources:
+  - name: "TechCrunch AI"
+    url: "https://techcrunch.com/category/artificial-intelligence/feed/"
+    type: "major_media"
+    language: "en"
+    trust_base: 70
+
+  - name: "The Verge AI"
+    url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+    type: "major_media"
+    language: "en"
+    trust_base: 70
+
+  - name: "VentureBeat AI"
+    url: "https://venturebeat.com/category/ai/feed/"
+    type: "specialist_media"
+    language: "en"
+    trust_base: 65
+
+  - name: "MIT Technology Review"
+    url: "https://www.technologyreview.com/feed/"
+    type: "specialist_media"
+    language: "en"
+    trust_base: 80
+
+  - name: "AI News Japan"
+    url: "https://ainews.jp/feed"
+    type: "specialist_media"
+    language: "ja"
+    trust_base: 60
+
+settings:
+  max_articles_per_source: 20
+  body_text_max_chars: 3000
+  request_timeout_seconds: 15
+  dedupe_title_similarity_threshold: 0.85

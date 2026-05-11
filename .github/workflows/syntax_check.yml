@@ -1,0 +1,39 @@
+name: Syntax Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Syntax check
+        run: |
+          python -m py_compile fetch_articles.py
+          python -m py_compile normalize_articles.py
+          python -m py_compile dedupe_articles.py
+          python -m py_compile write_log.py
+          python -m py_compile run_pipeline.py
+          python -m py_compile utils.py
+
+      - name: Import check
+        run: |
+          python -c "from utils import normalize_url; print('utils OK')"
+          python -c "import fetch_articles; print('fetch_articles OK')"
+          python -c "import normalize_articles; print('normalize_articles OK')"
+          python -c "import dedupe_articles; print('dedupe_articles OK')"
+          python -c "import write_log; print('write_log OK')"
