@@ -261,7 +261,7 @@ def score_expression_risk(article: dict) -> dict:
 
 # ─── 判定ロジック ─────────────────────────────────────────────
 
-def determine_verdict(scores: dict, escalation: dict) -> dict:
+def determine_verdict(scores: dict, escalation: dict, source_type: str = "") -> dict:
     """スコアからverdict（draft_auto / human_review / blocked）を決定する。"""
     importance   = scores["importance"]["score"]
     trust        = scores["trust"]["score"]
@@ -269,6 +269,21 @@ def determine_verdict(scores: dict, escalation: dict) -> dict:
     freshness    = scores["freshness"]["score"]
     expression   = scores["expression_risk"]["score"]
     trust_cat    = scores["trust"]["trust_category"]
+
+    # academic_paper 専用分岐
+    # 論文は一次情報だが解釈に編集判断が必要なため draft_auto には通さない
+    if source_type == "academic_paper":
+        if risk >= 61 or freshness == 0:
+            return {
+                "status": "blocked",
+                "reason": f"academic_paper停止条件: risk={risk}, freshness={freshness}",
+                "requires_human_review": False,
+            }
+        return {
+            "status": "human_review",
+            "reason": "academic_paperは解釈確認が必要",
+            "requires_human_review": True,
+        }
 
     # Blocked条件（OR: 1つでも該当すれば停止）
     if any([
@@ -344,7 +359,8 @@ def score_article(article: dict) -> dict:
         "freshness":     freshness,
         "expression_risk": expression,
     }
-    verdict = determine_verdict(scores, escalation)
+    source_type = article.get("source", {}).get("type", "")
+    verdict = determine_verdict(scores, escalation, source_type)
 
     return {
         **article,
