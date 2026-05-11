@@ -173,8 +173,18 @@ def write_review_list(articles: list[dict]) -> None:
     lines = [
         f"# Human Review 一覧",
         f"",
-        f"確認が必要な記事 {len(review)} 件。スコアと理由を見て、承認・修正・却下を判断してください。",
+        f"確認が必要な記事 {len(review)} 件。",
         f"",
+        "## 確認観点",
+        "",
+        "各記事について以下を確認してください：",
+        "",
+        "1. **一次ソース** — 公式発表・プレスリリース・論文か、または二次報道か",
+        "2. **日付** — 本当に新鮮か、古いニュースの再掲ではないか",
+        "3. **リスク** — 法務・金融・医療・個人名など高リスク要素がないか",
+        "4. **タイトル表現** — 断定的・煽り表現がないか、内容と一致しているか",
+        "5. **承認判断** — `approved` / `approved_with_edit` / `rejected` をCSVに記入",
+        "",
         "---",
         "",
     ]
@@ -192,11 +202,14 @@ def write_index(articles: list[dict]) -> None:
     from collections import Counter
     verdict_counts = Counter((a.get("verdict") or {}).get("status", "") for a in articles)
 
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    from datetime import timedelta
+    now_utc = datetime.now(timezone.utc)
+    now_jst = now_utc + timedelta(hours=9)
+    now_str = f"{now_jst.strftime('%Y-%m-%d %H:%M')} JST ({now_utc.strftime('%H:%M')} UTC)"
     lines = [
         "# Failsafe News Curator — 記事インデックス",
         "",
-        f"生成日時：{now}",
+        f"生成日時：{now_str}",
         "",
         "## サマリー",
         "",
@@ -240,6 +253,51 @@ def write_index(articles: list[dict]) -> None:
     log.info(f"index: {out_path.name}")
 
 
+def write_blocked_list(articles: list[dict]) -> None:
+    """blocked の記事を理由別にまとめる。過剰ブロック検出・ルール改善用。"""
+    blocked = [a for a in articles if (a.get("verdict") or {}).get("status") == "blocked"]
+    if not blocked:
+        return
+
+    from collections import Counter
+    reason_counts = Counter((a.get("verdict") or {}).get("reason", "")[:60] for a in blocked)
+
+    out_path = PUBLISH_DIR / "blocked.md"
+    lines = [
+        "# Blocked 記事一覧",
+        "",
+        f"停止された記事 {len(blocked)} 件。過剰ブロックがないか確認し、ルール改善に活用してください。",
+        "",
+        "## 停止理由の内訳",
+        "",
+        "| 理由 | 件数 |",
+        "|------|------|",
+    ]
+    for reason, count in reason_counts.most_common():
+        lines.append(f"| {reason} | {count} |")
+
+    lines += ["", "---", ""]
+
+    for a in blocked:
+        orig   = a.get("original", {})
+        src    = a.get("source", {})
+        scores = a.get("scores", {})
+        reason = (a.get("verdict") or {}).get("reason", "")
+        lines += [
+            f"- **{orig.get('title','（タイトルなし）')}**",
+            f"  - ソース: {src.get('name','')} | "
+            f"trust: {scores.get('trust',{}).get('score','-')} | "
+            f"risk: {scores.get('risk',{}).get('score','-')} | "
+            f"freshness: {scores.get('freshness',{}).get('score','-')}",
+            f"  - 理由: {reason}",
+            f"  - URL: {orig.get('url','')}",
+            "",
+        ]
+
+    out_path.write_text("\n".join(lines), encoding="utf-8")
+    log.info(f"blocked: {out_path.name} ({len(blocked)}件)")
+
+
 # ─── メイン ─────────────────────────────────────────────────
 
 def main():
@@ -251,6 +309,7 @@ def main():
     log.info(f"記事読み込み: {len(articles)}件")
     write_daily_draft(articles)
     write_review_list(articles)
+    write_blocked_list(articles)
     write_index(articles)
     log.info(f"publish/ への出力完了")
 
