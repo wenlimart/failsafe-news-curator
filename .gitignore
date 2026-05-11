@@ -20,10 +20,10 @@ articles_ready/*
 scored_articles/*
 !scored_articles/.gitkeep
 
-# Publish output (keep index only, ignore drafts and review)
-publish/*
-!publish/.gitkeep
-!publish/index.md
+# Publish output
+# docs/index.md と日付別ページはコミット対象（GitHub Pages で公開）
+# docs/internal/ はコミット対象外（内部確認用）
+docs/internal/
 
 # Logs and review records (keep directory, ignore contents)
 logs/*.log

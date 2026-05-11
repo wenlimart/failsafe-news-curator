@@ -1,16 +1,17 @@
 """
 publish_markdown.py
-scored_articles/ の記事をMarkdownに変換し、publish/ に保存する。
+scored_articles/ の記事をMarkdownに変換し、docs/ に保存する。
+GitHub Pages の公開元は /docs に設定する。
 
 出力ファイル：
-  publish/YYYY-MM-DD.md   日付別まとめ（draft_auto のみ）
-  publish/review.md       human_review 一覧（閾値調整用）
-  publish/index.md        全体インデックス
+  docs/index.md              公開トップ（draft_auto サマリー）
+  docs/YYYY-MM-DD.md         日付別 draft_auto 記事（公開）
+  docs/internal/review.md    human_review 一覧（内部確認用）
+  docs/internal/blocked.md   blocked 分析（内部確認用）
 
-目的：
-  - draft_auto の記事を実際に読んで品質を確認する
-  - human_review の記事を一覧で見て、閾値の妥当性を判断する
-  - blocked の理由を可視化して、過剰ブロックを検出する
+公開 vs 内部：
+  docs/          → GitHub Pages で公開
+  docs/internal/ → GitHub上では見えるが、サイト導線からは外す
 """
 
 import json
@@ -21,11 +22,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # ─── パス設定 ───────────────────────────────────────────────
-BASE_DIR    = Path(__file__).parent
-SCORED_DIR  = BASE_DIR / "scored_articles"
-PUBLISH_DIR = BASE_DIR / "publish"
-LOGS_DIR    = BASE_DIR / "logs"
-PUBLISH_DIR.mkdir(exist_ok=True)
+BASE_DIR     = Path(__file__).parent
+SCORED_DIR   = BASE_DIR / "scored_articles"
+DOCS_DIR     = BASE_DIR / "docs"
+INTERNAL_DIR = DOCS_DIR / "internal"
+LOGS_DIR     = BASE_DIR / "logs"
+DOCS_DIR.mkdir(exist_ok=True)
+INTERNAL_DIR.mkdir(exist_ok=True)
 LOGS_DIR.mkdir(exist_ok=True)
 
 logging.basicConfig(
@@ -144,7 +147,7 @@ def write_daily_draft(articles: list[dict]) -> None:
         by_date[date].append(a)
 
     for date, items in sorted(by_date.items(), reverse=True):
-        out_path = PUBLISH_DIR / f"{date}.md"
+        out_path = DOCS_DIR / f"{date}.md"
         lines = [
             f"# {date} — Draft Auto 記事",
             f"",
@@ -169,7 +172,7 @@ def write_review_list(articles: list[dict]) -> None:
         log.info("human_review の記事がありません。")
         return
 
-    out_path = PUBLISH_DIR / "review.md"
+    out_path = INTERNAL_DIR / "review.md"
     lines = [
         f"# Human Review 一覧",
         f"",
@@ -198,7 +201,7 @@ def write_review_list(articles: list[dict]) -> None:
 
 
 def write_index(articles: list[dict]) -> None:
-    """全記事のインデックスをMarkdownで書き出す。"""
+    """公開トップページ（index.md）を生成する。draft_auto のみ掲載。"""
     from collections import Counter
     verdict_counts = Counter((a.get("verdict") or {}).get("status", "") for a in articles)
 
@@ -206,49 +209,58 @@ def write_index(articles: list[dict]) -> None:
     now_utc = datetime.now(timezone.utc)
     now_jst = now_utc + timedelta(hours=9)
     now_str = f"{now_jst.strftime('%Y-%m-%d %H:%M')} JST ({now_utc.strftime('%H:%M')} UTC)"
+
     lines = [
-        "# Failsafe News Curator — 記事インデックス",
+        "# Failsafe News Curator",
+        "フェイルセーフ型ニュースキュレーション基盤",
         "",
-        f"生成日時：{now_str}",
+        f"更新日時：{now_str}",
         "",
-        "## サマリー",
+        "---",
         "",
-        f"| ステータス | 件数 |",
-        f"|-----------|------|",
-        f"| ✅ Draft Auto   | {verdict_counts.get('draft_auto', 0)} |",
-        f"| 👁 Human Review | {verdict_counts.get('human_review', 0)} |",
-        f"| 🚫 Blocked      | {verdict_counts.get('blocked', 0)} |",
-        f"| **合計**        | **{len(articles)}** |",
+        "## 今日の公開候補記事",
         "",
-        "## ファイル一覧",
-        "",
-        "- [Draft Auto 記事](./YYYY-MM-DD.md) — 公開候補（日付別）",
-        "- [Human Review 一覧](./review.md) — 確認待ち記事",
-        "",
-        "## Draft Auto 記事タイトル一覧",
+        f"自動選別済み記事のうち、低リスク・一次情報・新鮮な {verdict_counts.get('draft_auto', 0)} 件を掲載します。",
         "",
     ]
+
     draft = [a for a in articles if (a.get("verdict") or {}).get("status") == "draft_auto"]
-    for a in draft:
-        title = a.get("original", {}).get("title", "（タイトルなし）")
-        url   = a.get("original", {}).get("url", "")
-        src   = a.get("source", {}).get("name", "")
-        lines.append(f"- [{title}]({url}) — {src}")
+    if draft:
+        # 日付別にリンク
+        by_date: dict[str, list] = defaultdict(list)
+        for a in draft:
+            pub = a.get("original", {}).get("published_at", "")
+            date = pub[:10] if pub else "unknown"
+            by_date[date].append(a)
+
+        for date, items in sorted(by_date.items(), reverse=True):
+            lines.append(f"### {date}")
+            lines.append("")
+            for a in items:
+                title = a.get("original", {}).get("title", "（タイトルなし）")
+                url   = a.get("original", {}).get("url", "")
+                src   = a.get("source", {}).get("name", "")
+                lines.append(f"- [{title}]({url}) — {src}")
+            lines.append("")
+    else:
+        lines.append("*本日の公開候補記事はありません。*")
+        lines.append("")
 
     lines += [
+        "---",
         "",
-        "## Human Review 記事タイトル一覧",
+        "## このサイトについて",
         "",
+        "収集したニュースを自動スコアリングし、信頼度・リスク・鮮度を評価した上で掲載しています。",
+        "",
+        "- **一次情報優先** — 公式ブログ・プレスリリースを優先して取得",
+        "- **フェイルセーフ設計** — 法務・規制・医療・金融系は人間が確認",
+        "- **出典を必ず表示** — 元記事URLを全件掲載",
+        "",
+        f"*Powered by [failsafe-news-curator](https://github.com/wenlimart/failsafe-news-curator)*",
     ]
-    review = [a for a in articles if (a.get("verdict") or {}).get("status") == "human_review"]
-    for a in review:
-        title  = a.get("original", {}).get("title", "（タイトルなし）")
-        url    = a.get("original", {}).get("url", "")
-        src    = a.get("source", {}).get("name", "")
-        reason = (a.get("verdict") or {}).get("reason", "")[:50]
-        lines.append(f"- [{title}]({url}) — {src} | {reason}")
 
-    out_path = PUBLISH_DIR / "index.md"
+    out_path = DOCS_DIR / "index.md"
     out_path.write_text("\n".join(lines), encoding="utf-8")
     log.info(f"index: {out_path.name}")
 
@@ -262,7 +274,7 @@ def write_blocked_list(articles: list[dict]) -> None:
     from collections import Counter
     reason_counts = Counter((a.get("verdict") or {}).get("reason", "")[:60] for a in blocked)
 
-    out_path = PUBLISH_DIR / "blocked.md"
+    out_path = INTERNAL_DIR / "blocked.md"
     lines = [
         "# Blocked 記事一覧",
         "",
@@ -311,7 +323,7 @@ def main():
     write_review_list(articles)
     write_blocked_list(articles)
     write_index(articles)
-    log.info(f"publish/ への出力完了")
+    log.info(f"docs/ への出力完了")
 
 
 if __name__ == "__main__":
