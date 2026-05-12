@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -29,6 +29,8 @@ jobs:
           python -m py_compile write_log.py
           python -m py_compile run_pipeline.py
           python -m py_compile utils.py
+          python -m py_compile score_articles.py
+          python -m py_compile publish_markdown.py
 
       - name: Import check
         run: |
@@ -37,3 +39,5 @@ jobs:
           python -c "import normalize_articles; print('normalize_articles OK')"
           python -c "import dedupe_articles; print('dedupe_articles OK')"
           python -c "import write_log; print('write_log OK')"
+          python -c "import score_articles; print('score_articles OK')"
+          python -c "import publish_markdown; print('publish_markdown OK')"
