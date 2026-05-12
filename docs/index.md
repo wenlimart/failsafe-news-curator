@@ -1,13 +1,20 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-05-12 11:45 JST (02:45 UTC)
+更新日時：2026-05-13 07:41 JST (22:41 UTC)
 
 ---
 
 ## 今日の公開候補記事
 
-自動選別済み記事のうち、低リスク・一次情報・新鮮な 5 件を掲載します。
+自動選別済み記事のうち、低リスク・一次情報・新鮮な 9 件を掲載します。
+
+### 2026-05-12
+
+- [How finance teams use Codex](https://openai.com/academy/codex-for-work/how-finance-teams-use-codex) — OpenAI News
+- [How NVIDIA engineers and researchers build with Codex](https://openai.com/index/nvidia) — OpenAI News
+- [What Parameter Golf taught us about AI-assisted research](https://openai.com/index/what-parameter-golf-taught-us) — OpenAI News
+- [AutoScout24 scales engineering with AI-powered workflows](https://openai.com/index/autoscout24) — OpenAI News
 
 ### 2026-05-11
 
