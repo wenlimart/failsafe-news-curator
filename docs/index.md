@@ -1,7 +1,7 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-05-12 10:28 JST (01:28 UTC)
+更新日時：2026-05-12 11:06 JST (02:06 UTC)
 
 ---
 
@@ -16,6 +16,8 @@
 - [The new AI-powered Google Finance is expanding to Europe.](https://blog.google/products-and-platforms/products/search/ai-powered-google-finance-in-europe/) — Google AI Blog
 - [How ChatGPT adoption broadened in early 2026](https://openai.com/signals/research/2026q1-update) — OpenAI News
 - [OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company) — OpenAI News
+
+[過去ログを見る](archive/)
 
 ---
 
