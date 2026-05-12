@@ -1,7 +1,7 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-05-12 11:06 JST (02:06 UTC)
+更新日時：2026-05-12 11:27 JST (02:27 UTC)
 
 ---
 
@@ -11,11 +11,11 @@
 
 ### 2026-05-11
 
-- [OpenAI Campus Network: Student club interest form](https://openai.com/index/openai-campus-network-student-club-interest-form) — OpenAI News
-- [How enterprises are scaling AI](https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai) — OpenAI News
-- [The new AI-powered Google Finance is expanding to Europe.](https://blog.google/products-and-platforms/products/search/ai-powered-google-finance-in-europe/) — Google AI Blog
 - [How ChatGPT adoption broadened in early 2026](https://openai.com/signals/research/2026q1-update) — OpenAI News
+- [How enterprises are scaling AI](https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai) — OpenAI News
+- [OpenAI Campus Network: Student club interest form](https://openai.com/index/openai-campus-network-student-club-interest-form) — OpenAI News
 - [OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company) — OpenAI News
+- [The new AI-powered Google Finance is expanding to Europe.](https://blog.google/products-and-platforms/products/search/ai-powered-google-finance-in-europe/) — Google AI Blog
 
 [過去ログを見る](archive/)
 
