@@ -32,7 +32,7 @@ ARCHIVE_DIR.mkdir(exist_ok=True)
 LOGS_DIR.mkdir(exist_ok=True)
 
 # トップページに表示する最新日数
-INDEX_DAYS = 2
+INDEX_DAYS = 1
 
 logging.basicConfig(
     level=logging.INFO,
@@ -91,8 +91,56 @@ def score_bar(score: int, max_score: int = 100) -> str:
     return "█" * filled + "░" * (10 - filled) + f" {score}"
 
 
-def format_article_block(article: dict, show_body: bool = False) -> str:
-    """記事1件をMarkdownブロックとして整形する。"""
+def make_anchor(article: dict) -> str:
+    """
+    記事URLのpathから安定したアンカーIDを生成する。
+    URLパスが空の場合はタイトルをfallbackにする。
+    生成ルール: 英数字とハイフン・アンダースコア以外をハイフンに置換し、
+                連続ハイフンを1つにまとめ、先頭40文字を使う。
+    例:
+      https://openai.com/news/how-finance-teams-use-codex
+        → article-how-finance-teams-use-codex
+      https://openai.com/news/2026/05/12/
+        → article-2026-05-12  (末尾スラッシュ除去後のpath全体から生成)
+    """
+    from urllib.parse import urlparse
+    url   = article.get("original", {}).get("url", "")
+    title = article.get("original", {}).get("title", "")
+
+    # URLのpathを使う
+    raw = ""
+    if url:
+        path = urlparse(url).path.strip("/")
+        if path:
+            raw = path
+
+    # pathが空ならtitleをfallback
+    if not raw and title:
+        raw = title
+
+    slug = re.sub(r"[^a-zA-Z0-9_]", "-", raw)
+    slug = re.sub(r"-+", "-", slug).strip("-")
+    return f"article-{slug[:50]}"
+
+
+def format_article_list(items: list[dict]) -> list[str]:
+    """
+    記事の簡易リストを生成する。
+    記事タイトル → 元記事URL
+    ソース名    → ページ内詳細アンカー
+    """
+    lines = []
+    for a in items:
+        title  = a.get("original", {}).get("title", "（タイトルなし）")
+        url    = a.get("original", {}).get("url", "")
+        src    = a.get("source", {}).get("name", "不明")
+        anchor = make_anchor(a)
+        lines.append(f"- [{title}]({url}) — [{src}](#{anchor})")
+    return lines
+
+
+def format_article_block(article: dict, show_body: bool = True) -> str:
+    """記事1件の詳細ブロックを生成する。アンカーID付き。"""
     orig    = article.get("original", {})
     src     = article.get("source", {})
     ps      = article.get("primary_source", {})
@@ -116,9 +164,12 @@ def format_article_block(article: dict, show_body: bool = False) -> str:
     expr  = scores.get("expression_risk", {}).get("score", "-")
     t_cat = scores.get("trust", {}).get("trust_category", "-")
     verdict_reason = verdict.get("reason", "")
+    anchor = make_anchor(article)
 
     lines = [
-        f"### {title}",
+        f'<a id="{anchor}"></a>',
+        f"",
+        f"### [{title}]({url})",
         f"",
         f"- **ソース：** {source_name}（`{source_type}`）",
         f"- **公開日時：** {published_at}",
@@ -168,11 +219,17 @@ def write_daily_draft(articles: list[dict]) -> None:
             f"",
             f"一次情報・低リスク・新鮮な記事 {len(items)} 件を掲載しています。",
             f"",
-            f"[← トップに戻る](index.md) | [過去ログ](archive/)",
-            f"",
+        ]
+        # 簡易リスト（タイトル → 元記事URL、ソース名 → 詳細アンカー）
+        lines += format_article_list(items)
+        lines += [
+            "",
+            "[← トップに戻る](index.md) | [過去ログ](archive/)",
+            "",
             "---",
             "",
         ]
+        # 記事詳細（アンカー付き）
         for a in items:
             lines.append(format_article_block(a, show_body=True))
             lines.append("---")
@@ -263,7 +320,7 @@ def write_blocked_list(articles: list[dict]) -> None:
 
 
 def write_index(articles: list[dict]) -> None:
-    """公開トップページ（index.md）を生成する。最新 INDEX_DAYS 日分の draft_auto のみ掲載。"""
+    """公開トップページ（index.md）を生成する。最新掲載日1日分の draft_auto を掲載。"""
     from collections import Counter
     verdict_counts = Counter((a.get("verdict") or {}).get("status", "") for a in articles)
 
@@ -272,11 +329,17 @@ def write_index(articles: list[dict]) -> None:
     now_str = f"{now_jst.strftime('%Y-%m-%d %H:%M')} JST ({now_utc.strftime('%H:%M')} UTC)"
 
     by_date = group_draft_by_published_date(articles)
-    # unknown を除いて新しい順にソートし、最新 INDEX_DAYS 日分だけ使う
+    # unknown を除いて新しい順にソートし、最新 INDEX_DAYS(=1) 日分だけ使う
     sorted_dates = sorted(
         [d for d in by_date if d != "unknown"],
         reverse=True
     )[:INDEX_DAYS]
+
+    # 表示対象の記事をまとめる
+    latest_items: list[dict] = []
+    latest_date = sorted_dates[0] if sorted_dates else None
+    if latest_date:
+        latest_items = by_date[latest_date]
 
     lines = [
         "# Failsafe News Curator",
@@ -288,30 +351,38 @@ def write_index(articles: list[dict]) -> None:
         "",
         "## 今日の掲載記事",
         "",
-        f"自動選別により、低リスク・一次情報・新鮮と判定された記事 {verdict_counts.get('draft_auto', 0)} 件を掲載しています。",
+        f"自動選別により、低リスク・一次情報・新鮮と判定された記事 {len(latest_items)} 件を掲載しています。",
         "",
     ]
 
-    if sorted_dates:
-        for date in sorted_dates:
-            items = by_date[date]
-            lines.append(f"### {date}")
-            lines.append("")
-            for a in items:
-                title = a.get("original", {}).get("title", "（タイトルなし）")
-                url   = a.get("original", {}).get("url", "")
-                src   = a.get("source", {}).get("name", "")
-                lines.append(f"- [{title}]({url}) — {src}")
+    if latest_items:
+        lines.append(f"### {latest_date}")
+        lines.append("")
+        # 簡易リスト（タイトル → 元記事URL、ソース名 → 詳細アンカー）
+        lines += format_article_list(latest_items)
+        lines += [
+            "",
+            "[過去ログを見る](archive/)",
+            "",
+            "---",
+            "",
+        ]
+        # 記事詳細（アンカー付き）
+        for a in latest_items:
+            lines.append(format_article_block(a, show_body=True))
+            lines.append("---")
             lines.append("")
     else:
-        lines.append("*本日の掲載記事はありません。*")
-        lines.append("")
+        lines += [
+            "*本日の掲載記事はありません。*",
+            "",
+            "[過去ログを見る](archive/)",
+            "",
+            "---",
+            "",
+        ]
 
     lines += [
-        "[過去ログを見る](archive/)",
-        "",
-        "---",
-        "",
         "## このサイトについて",
         "",
         "収集したニュースを自動スコアリングし、信頼度・リスク・鮮度を評価した上で掲載しています。",

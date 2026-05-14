@@ -1,7 +1,7 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-05-14 14:11 JST (05:11 UTC)
+更新日時：2026-05-14 23:41 JST (14:41 UTC)
 
 ---
 
@@ -11,9 +11,35 @@
 
 ### 2026-05-12
 
-- [How finance teams use Codex](https://openai.com/academy/how-finance-teams-use-codex) — OpenAI News
+- [How finance teams use Codex](https://openai.com/academy/how-finance-teams-use-codex) — [OpenAI News](#article-academy-how-finance-teams-use-codex)
 
 [過去ログを見る](archive/)
+
+---
+
+<a id="article-academy-how-finance-teams-use-codex"></a>
+
+### [How finance teams use Codex](https://openai.com/academy/how-finance-teams-use-codex)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-05-12T15:00:00+00:00
+- **記事URL：** https://openai.com/academy/how-finance-teams-use-codex
+- **一次ソース：** https://openai.com/academy/how-finance-teams-use-codex（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ███████░░░ 70 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> See how finance teams can use Codex to build MBRs, reporting packs, variance bridges, model checks, and planning scenarios from real work inputs.
 
 ---
 
