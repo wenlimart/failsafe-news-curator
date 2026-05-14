@@ -25,11 +25,14 @@ SCORED_DIR   = BASE_DIR / "scored_articles"
 DOCS_DIR     = BASE_DIR / "docs"
 INTERNAL_DIR = DOCS_DIR / "internal"
 ARCHIVE_DIR  = DOCS_DIR / "archive"
+DATA_DIR     = BASE_DIR / "data"
 LOGS_DIR     = BASE_DIR / "logs"
 DOCS_DIR.mkdir(exist_ok=True)
 INTERNAL_DIR.mkdir(exist_ok=True)
 ARCHIVE_DIR.mkdir(exist_ok=True)
 LOGS_DIR.mkdir(exist_ok=True)
+
+PUBLISHED_JSONL = DATA_DIR / "published.jsonl"
 
 # トップページに表示する最新日数
 INDEX_DAYS = 1
@@ -57,6 +60,85 @@ def load_scored_articles() -> list[dict]:
         except Exception as e:
             log.error(f"読み込み失敗: {path} → {e}")
     return rows
+
+
+def _load_published_urls() -> set[str]:
+    """published.jsonl に記録済みのURLセットを返す（重複防止用）。"""
+    urls: set[str] = set()
+    if not PUBLISHED_JSONL.exists():
+        return urls
+    with open(PUBLISHED_JSONL, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rec = json.loads(line)
+                if rec.get("url"):
+                    urls.add(rec["url"])
+            except json.JSONDecodeError:
+                pass
+    return urls
+
+
+def append_to_published_jsonl(articles: list[dict]) -> int:
+    """
+    draft_auto 記事を data/published.jsonl に追記する。
+    重複防止キー: article URL（article_id は実行ごとに変わるため使わない）
+    本文プレビューは最大200文字に限定し、外部記事本文を過剰蓄積しない。
+    戻り値: 新規追記件数
+    """
+    existing_urls = _load_published_urls()
+    new_records = []
+
+    for a in articles:
+        if (a.get("verdict") or {}).get("status") != "draft_auto":
+            continue
+
+        orig   = a.get("original", {})
+        src    = a.get("source", {})
+        ps     = a.get("primary_source", {})
+        scores = a.get("scores", {})
+
+        url = orig.get("url", "")
+        if not url or url in existing_urls:
+            continue
+
+        # 本文プレビューは最大200文字
+        body_text = orig.get("body_text", "").strip()
+        preview   = body_text[:200] + "..." if len(body_text) > 200 else body_text
+
+        record = {
+            "url":               url,
+            "title":             orig.get("title", ""),
+            "published_at":      orig.get("published_at", ""),
+            "published_date":    get_published_date(a),
+            "source_name":       src.get("name", ""),
+            "source_type":       src.get("type", ""),
+            "primary_source_url": ps.get("url") or "",
+            "scores": {
+                "importance":    scores.get("importance",    {}).get("score"),
+                "trust":         scores.get("trust",         {}).get("score"),
+                "risk":          scores.get("risk",          {}).get("score"),
+                "freshness":     scores.get("freshness",     {}).get("score"),
+                "expression_risk": scores.get("expression_risk", {}).get("score"),
+            },
+            "trust_category":   scores.get("trust", {}).get("trust_category", ""),
+            "decision_reasons":  (a.get("verdict") or {}).get("reason", ""),
+            "body_preview":     preview,
+            "recorded_at":      datetime.now(timezone.utc).isoformat(),
+        }
+        new_records.append(record)
+        existing_urls.add(url)
+
+    if new_records:
+        DATA_DIR.mkdir(exist_ok=True)
+        with open(PUBLISHED_JSONL, "a", encoding="utf-8") as f:
+            for rec in new_records:
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+    log.info(f"published.jsonl: {len(new_records)}件追記（累計行数確認は別途）")
+    return len(new_records)
 
 
 def get_published_date(article: dict) -> str:
@@ -444,6 +526,7 @@ def main():
     write_blocked_list(articles)
     write_index(articles)
     write_archive_index()          # 日別ページ生成後にアーカイブ一覧を作る
+    append_to_published_jsonl(articles)  # draft_auto 記事を永続データに追記
     log.info(f"docs/ への出力完了")
 
 
