@@ -3,17 +3,22 @@ publish_markdown.py
 scored_articles/ の記事をMarkdownに変換し、docs/ に保存する。
 GitHub Pages の公開元は /docs に設定する。
 
-出力ファイル：
-  docs/index.md                公開トップ（最新2日分の draft_auto）
-  docs/YYYY-MM-DD.md           日付別 draft_auto 記事（記事公開日ベース）
-  docs/archive/index.md        日別ページの一覧（過去ログ）
-  docs/internal/review.md      human_review 一覧（内部確認用）
-  docs/internal/blocked.md     blocked 分析（内部確認用）
+通常実行（run_pipeline.py から呼ばれる）:
+  python publish_markdown.py
+  → docs/index.md, docs/YYYY-MM-DD.md, docs/archive/index.md,
+     docs/internal/review.md, docs/internal/blocked.md を生成
+
+再生成モード（手動実行のみ）:
+  python publish_markdown.py --regenerate --date YYYY-MM-DD
+  → data/published.jsonl から指定日の記事を読み込み、
+    docs/YYYY-MM-DD.md を新形式で再生成する
+  → 指定日のデータがない場合は既存ファイルを変更しない
 """
 
 import json
 import glob
 import re
+import argparse
 import logging
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
@@ -512,9 +517,149 @@ def write_archive_index() -> None:
     log.info(f"archive: {out_path.name} ({len(date_files)}件)")
 
 
+# ─── 再生成モード ─────────────────────────────────────────────
+
+def load_published_for_date(date: str) -> list[dict]:
+    """
+    data/published.jsonl から指定日（YYYY-MM-DD）の記事だけを返す。
+    published_date フィールドで絞り込む。
+    """
+    if not PUBLISHED_JSONL.exists():
+        log.warning(f"data/published.jsonl が存在しません。Phase 1 を先に実行してください。")
+        return []
+
+    records = []
+    with open(PUBLISHED_JSONL, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rec = json.loads(line)
+                if rec.get("published_date") == date:
+                    records.append(rec)
+            except json.JSONDecodeError:
+                pass
+
+    log.info(f"published.jsonl から {date} の記事: {len(records)}件")
+    return records
+
+
+def _record_to_article_dict(rec: dict) -> dict:
+    """
+    published.jsonl の1レコードを、format_article_block / format_article_list
+    が期待する article dict 形式に変換する。
+    """
+    scores_raw = rec.get("scores", {})
+    return {
+        "original": {
+            "title":        rec.get("title", ""),
+            "url":          rec.get("url", ""),
+            "published_at": rec.get("published_at", ""),
+            "body_text":    rec.get("body_preview", ""),
+        },
+        "source": {
+            "name": rec.get("source_name", ""),
+            "type": rec.get("source_type", ""),
+        },
+        "primary_source": {
+            "url":      rec.get("primary_source_url") or "",
+            "type":     rec.get("primary_source_type") or rec.get("source_type") or ("official_blog" if rec.get("primary_source_url") else "none"),
+            "detected": bool(rec.get("primary_source_url")),
+        },
+        "scores": {
+            "importance":     {"score": scores_raw.get("importance")},
+            "trust":          {
+                "score":          scores_raw.get("trust"),
+                "trust_category": rec.get("trust_category", ""),
+            },
+            "risk":           {"score": scores_raw.get("risk")},
+            "freshness":      {"score": scores_raw.get("freshness")},
+            "expression_risk":{"score": scores_raw.get("expression_risk")},
+        },
+        "verdict": {
+            "status": "draft_auto",
+            "reason": rec.get("decision_reasons", ""),
+        },
+        "qa": {"flags": []},
+    }
+
+
+def regenerate_daily_page(date: str) -> None:
+    """
+    data/published.jsonl の指定日データから docs/YYYY-MM-DD.md を再生成する。
+
+    安全手順:
+      1. docs/YYYY-MM-DD.md.new に書き出す
+      2. 問題なければ docs/YYYY-MM-DD.md に置き換える
+      3. 指定日のデータがない場合は既存ファイルを変更しない
+    """
+    # 日付形式の検証
+    if not re.match(r'^\d{4}-\d{2}-\d{2}$', date):
+        log.error(f"日付形式が不正です: {date}（YYYY-MM-DD で指定してください）")
+        return
+
+    records = load_published_for_date(date)
+    if not records:
+        log.warning(f"{date} のデータが published.jsonl に見つかりません。既存ファイルを変更しません。")
+        return
+
+    # published.jsonl レコードを article dict に変換
+    items = [_record_to_article_dict(r) for r in records]
+
+    out_path     = DOCS_DIR / f"{date}.md"
+    tmp_path     = DOCS_DIR / f"{date}.md.new"
+
+    lines = [
+        f"# {date} — 掲載記事",
+        f"",
+        f"一次情報・低リスク・新鮮な記事 {len(items)} 件を掲載しています。",
+        f"",
+    ]
+    # 簡易リスト
+    lines += format_article_list(items)
+    lines += [
+        "",
+        "[← トップに戻る](index.md) | [過去ログ](archive/)",
+        "",
+        "---",
+        "",
+    ]
+    # 記事詳細
+    for a in items:
+        lines.append(format_article_block(a, show_body=True))
+        lines.append("---")
+        lines.append("")
+
+    # .new に書き出してから置き換え
+    tmp_path.write_text("\n".join(lines), encoding="utf-8")
+    tmp_path.replace(out_path)
+    log.info(f"再生成完了: {out_path.name} ({len(items)}件)")
+
+
 # ─── メイン ─────────────────────────────────────────────────
 
 def main():
+    parser = argparse.ArgumentParser(description="publish_markdown.py")
+    parser.add_argument(
+        "--regenerate", action="store_true",
+        help="再生成モード（data/published.jsonl から日別ページを再生成する）"
+    )
+    parser.add_argument(
+        "--date",
+        help="再生成対象の日付（YYYY-MM-DD）。--regenerate と一緒に使う"
+    )
+    args = parser.parse_args()
+
+    # 再生成モード
+    if args.regenerate:
+        if not args.date:
+            log.error("--regenerate には --date YYYY-MM-DD が必要です。")
+            return
+        regenerate_daily_page(args.date)
+        return
+
+    # 通常モード（run_pipeline.py から呼ばれる）
     articles = load_scored_articles()
     if not articles:
         log.warning("scored_articles/ にファイルがありません。score_articles.py を先に実行してください。")
