@@ -164,9 +164,9 @@ def write_daily_draft(articles: list[dict]) -> None:
             continue
         out_path = DOCS_DIR / f"{date}.md"
         lines = [
-            f"# {date} — 公開候補記事",
+            f"# {date} — 掲載記事",
             f"",
-            f"一次情報・低リスク・新鮮な記事 {len(items)} 件。投稿前に内容を確認してください。",
+            f"一次情報・低リスク・新鮮な記事 {len(items)} 件を掲載しています。",
             f"",
             f"[← トップに戻る](index.md) | [過去ログ](archive/)",
             f"",
@@ -286,9 +286,9 @@ def write_index(articles: list[dict]) -> None:
         "",
         "---",
         "",
-        "## 今日の公開候補記事",
+        "## 今日の掲載記事",
         "",
-        f"自動選別済み記事のうち、低リスク・一次情報・新鮮な {verdict_counts.get('draft_auto', 0)} 件を掲載します。",
+        f"自動選別により、低リスク・一次情報・新鮮と判定された記事 {verdict_counts.get('draft_auto', 0)} 件を掲載しています。",
         "",
     ]
 
@@ -304,7 +304,7 @@ def write_index(articles: list[dict]) -> None:
                 lines.append(f"- [{title}]({url}) — {src}")
             lines.append("")
     else:
-        lines.append("*本日の公開候補記事はありません。*")
+        lines.append("*本日の掲載記事はありません。*")
         lines.append("")
 
     lines += [
@@ -341,7 +341,7 @@ def write_archive_index() -> None:
     lines = [
         "# 過去ログ",
         "",
-        "公開候補記事の日別アーカイブです。",
+        "掲載記事の日別アーカイブです。",
         "",
         "[← トップに戻る](../)",
         "",
