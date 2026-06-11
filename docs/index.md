@@ -1,19 +1,47 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-06-11 08:08 JST (23:08 UTC)
+更新日時：2026-06-12 08:06 JST (23:06 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 1 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 3 件を掲載しています。
 
 ### 2026-06-11
 
+- [Supporting Europe’s work in ensuring a trustworthy AI ecosystem](https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem) — [OpenAI News](#article-index-supporting-eu-trustworthy-ai-ecosystem)
 - [How an astrophysicist uses Codex to help simulate black holes](https://openai.com/index/using-codex-to-simulate-black-holes) — [OpenAI News](#article-index-using-codex-to-simulate-black-holes)
+- [BBVA puts AI at the core of banking with OpenAI](https://openai.com/index/bbva) — [OpenAI News](#article-index-bbva)
 
 [過去ログを見る](archive/)
+
+---
+
+<a id="article-index-supporting-eu-trustworthy-ai-ecosystem"></a>
+
+### [Supporting Europe’s work in ensuring a trustworthy AI ecosystem](https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-06-11T00:00:00+00:00
+- **記事URL：** https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem
+- **一次ソース：** https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ██████████ 100 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> OpenAI supports the EU Code of Practice on AI content transparency, advancing provenance standards and tools to help people understand AI-generated content.
 
 ---
 
@@ -40,6 +68,32 @@
 **本文プレビュー：**
 
 > Discover how astrophysicist Chi-kwan Chan uses Codex to build black hole simulations, helping scientists study extreme physics and test Einstein’s theory of general relativity.
+
+---
+
+<a id="article-index-bbva"></a>
+
+### [BBVA puts AI at the core of banking with OpenAI](https://openai.com/index/bbva)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-06-11T00:00:00+00:00
+- **記事URL：** https://openai.com/index/bbva
+- **一次ソース：** https://openai.com/index/bbva（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ██████████ 100 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> Learn how BBVA scaled ChatGPT Enterprise to 100,000 employees and partnered with OpenAI to accelerate AI-powered banking transformation worldwide.
 
 ---
 
