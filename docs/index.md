@@ -1,45 +1,17 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-07-19 07:22 JST (22:22 UTC)
+更新日時：2026-07-20 07:25 JST (22:25 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 1 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 0 件を掲載しています。
 
-### 2026-07-17
-
-- [A scorecard for the AI age](https://openai.com/index/a-scorecard-for-the-ai-age) — [OpenAI News](#article-index-a-scorecard-for-the-ai-age)
+*本日の掲載記事はありません。*
 
 [過去ログを見る](archive/)
-
----
-
-<a id="article-index-a-scorecard-for-the-ai-age"></a>
-
-### [A scorecard for the AI age](https://openai.com/index/a-scorecard-for-the-ai-age)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-07-17T10:00:00+00:00
-- **記事URL：** https://openai.com/index/a-scorecard-for-the-ai-age
-- **一次ソース：** https://openai.com/index/a-scorecard-for-the-ai-age（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ███████░░░ 70 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute.
 
 ---
 
