@@ -1,45 +1,17 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-08-15 06:49 JST (21:49 UTC)
+更新日時：2026-08-16 06:44 JST (21:44 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 1 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 0 件を掲載しています。
 
-### 2026-08-13
-
-- [Bring your spreadsheet data to life with Sheets canvas](https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/) — [Google AI Blog](#article-products-and-platforms-products-workspace-sheets-c)
+*本日の掲載記事はありません。*
 
 [過去ログを見る](archive/)
-
----
-
-<a id="article-products-and-platforms-products-workspace-sheets-c"></a>
-
-### [Bring your spreadsheet data to life with Sheets canvas](https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/)
-
-- **ソース：** Google AI Blog（`official_blog`）
-- **公開日時：** 2026-08-13T16:45:00+00:00
-- **記事URL：** https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/
-- **一次ソース：** https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ███████░░░ 70 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> Sheets canvas turns data into interactive dashboards, custom study trackers, seating charts, and more, all with a simple prompt.
 
 ---
 
