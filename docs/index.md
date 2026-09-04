@@ -1,7 +1,7 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-09-04 08:25 JST (23:25 UTC)
+更新日時：2026-09-05 08:10 JST (23:10 UTC)
 
 ---
 
@@ -12,8 +12,8 @@
 ### 2026-09-03
 
 - [Daybreak for Frontline Defenders: $1B to protect essential services](https://openai.com/index/daybreak-for-frontline-defenders) — [OpenAI News](#article-index-daybreak-for-frontline-defenders)
-- [Legora reviewed 41 documents in minutes with GPT-6 Astra](https://openai.com/index/legora-financial-statement-review-with-astra) — [OpenAI News](#article-index-legora-financial-statement-review-with-astra)
 - [Playco cut manual fixes 50% prototyping games with GPT-6 Astra](https://openai.com/index/playco-game-prototyping-with-astra) — [OpenAI News](#article-index-playco-game-prototyping-with-astra)
+- [Legora reviewed 41 documents in minutes with GPT-6 Astra](https://openai.com/index/legora-financial-statement-review-with-astra) — [OpenAI News](#article-index-legora-financial-statement-review-with-astra)
 
 [過去ログを見る](archive/)
 
@@ -33,7 +33,7 @@
 | Importance     | ███████░░░ 78 |
 | Trust          | ██████████ 100 |
 | Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
+| Freshness      | ███████░░░ 70 |
 | Expression Risk| ░░░░░░░░░░ 0 |
 
 - **Trust Category：** `primary`
@@ -42,32 +42,6 @@
 **本文プレビュー：**
 
 > OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.
-
----
-
-<a id="article-index-legora-financial-statement-review-with-astra"></a>
-
-### [Legora reviewed 41 documents in minutes with GPT-6 Astra](https://openai.com/index/legora-financial-statement-review-with-astra)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-09-03T12:00:00+00:00
-- **記事URL：** https://openai.com/index/legora-financial-statement-review-with-astra
-- **一次ソース：** https://openai.com/index/legora-financial-statement-review-with-astra（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.
 
 ---
 
@@ -85,7 +59,7 @@
 | Importance     | ███████░░░ 78 |
 | Trust          | ██████████ 100 |
 | Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
+| Freshness      | ███████░░░ 70 |
 | Expression Risk| ░░░░░░░░░░ 0 |
 
 - **Trust Category：** `primary`
@@ -94,6 +68,32 @@
 **本文プレビュー：**
 
 > Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.
+
+---
+
+<a id="article-index-legora-financial-statement-review-with-astra"></a>
+
+### [Legora reviewed 41 documents in minutes with GPT-6 Astra](https://openai.com/index/legora-financial-statement-review-with-astra)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-09-03T12:00:00+00:00
+- **記事URL：** https://openai.com/index/legora-financial-statement-review-with-astra
+- **一次ソース：** https://openai.com/index/legora-financial-statement-review-with-astra（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ███████░░░ 70 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.
 
 ---
 
