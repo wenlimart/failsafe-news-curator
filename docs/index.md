@@ -1,13 +1,13 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-09-24 08:51 JST (23:51 UTC)
+更新日時：2026-09-25 08:57 JST (23:57 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 7 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 8 件を掲載しています。
 
 ### 2026-09-23
 
@@ -16,6 +16,7 @@
 - [Harvey turns legal context into stronger drafts with GPT-6 Astra](https://openai.com/index/harvey-from-context-to-confidence-with-astra) — [OpenAI News](#article-index-harvey-from-context-to-confidence-with-astra)
 - [How invideo improves color grading 3x with GPT‑6 Astra](https://openai.com/index/invideo-builds-with-gpt-6-astra) — [OpenAI News](#article-index-invideo-builds-with-gpt-6-astra)
 - [Ringg’s AI agents resolve up to 65% of customer calls with OpenAI](https://openai.com/index/ringg) — [OpenAI News](#article-index-ringg)
+- [ChatGPT Ads expands to Southeast Asia and Taiwan](https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan) — [OpenAI News](#article-index-chatgpt-ads-expands-southeast-asia-taiwan)
 - [Airbnb widens access to GPT-6 Astra and OpenAI frontier models](https://openai.com/index/airbnb-gpt-6-astra) — [OpenAI News](#article-index-airbnb-gpt-6-astra)
 - [Grab and OpenAI bring practical AI skills to Southeast Asia](https://openai.com/index/grab-openai-ai-skills-southeast-asia) — [OpenAI News](#article-index-grab-openai-ai-skills-southeast-asia)
 
@@ -37,7 +38,7 @@
 | Importance     | ███████░░░ 78 |
 | Trust          | ██████████ 100 |
 | Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
+| Freshness      | ███████░░░ 70 |
 | Expression Risk| ░░░░░░░░░░ 0 |
 
 - **Trust Category：** `primary`
@@ -64,7 +65,7 @@
 | Importance     | ███████░░░ 78 |
 | Trust          | ██████████ 100 |
 | Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
+| Freshness      | ███████░░░ 70 |
 | Expression Risk| ░░░░░░░░░░ 0 |
 
 - **Trust Category：** `primary`
@@ -90,7 +91,7 @@
 | Importance     | ███████░░░ 78 |
 | Trust          | ██████████ 100 |
 | Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
+| Freshness      | ███████░░░ 70 |
 | Expression Risk| ░░░░░░░░░░ 0 |
 
 - **Trust Category：** `primary`
@@ -116,7 +117,7 @@
 | Importance     | ███████░░░ 78 |
 | Trust          | ██████████ 100 |
 | Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
+| Freshness      | ███████░░░ 70 |
 | Expression Risk| ░░░░░░░░░░ 0 |
 
 - **Trust Category：** `primary`
@@ -142,7 +143,7 @@
 | Importance     | ███████░░░ 78 |
 | Trust          | ██████████ 100 |
 | Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
+| Freshness      | ███████░░░ 70 |
 | Expression Risk| ░░░░░░░░░░ 0 |
 
 - **Trust Category：** `primary`
@@ -151,6 +152,32 @@
 **本文プレビュー：**
 
 > Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.
+
+---
+
+<a id="article-index-chatgpt-ads-expands-southeast-asia-taiwan"></a>
+
+### [ChatGPT Ads expands to Southeast Asia and Taiwan](https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-09-23T02:00:00+00:00
+- **記事URL：** https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan
+- **一次ソース：** https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ███████░░░ 70 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> ChatGPT Ads is expanding to Southeast Asia and Taiwan, giving eligible businesses new ways to reach people across more than 60 countries.
 
 ---
 
@@ -168,7 +195,7 @@
 | Importance     | ███████░░░ 78 |
 | Trust          | ██████████ 100 |
 | Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
+| Freshness      | ███████░░░ 70 |
 | Expression Risk| ░░░░░░░░░░ 0 |
 
 - **Trust Category：** `primary`
@@ -194,7 +221,7 @@
 | Importance     | ███████░░░ 78 |
 | Trust          | ██████████ 100 |
 | Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
+| Freshness      | ███████░░░ 70 |
 | Expression Risk| ░░░░░░░░░░ 0 |
 
 - **Trust Category：** `primary`
