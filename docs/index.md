@@ -1,45 +1,17 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-09-27 08:44 JST (23:44 UTC)
+更新日時：2026-09-28 08:52 JST (23:52 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 1 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 0 件を掲載しています。
 
-### 2026-09-25
-
-- [Proaction boosts sales 60% and saves 75+ hours with Codex](https://openai.com/index/proaction) — [OpenAI News](#article-index-proaction)
+*本日の掲載記事はありません。*
 
 [過去ログを見る](archive/)
-
----
-
-<a id="article-index-proaction"></a>
-
-### [Proaction boosts sales 60% and saves 75+ hours with Codex](https://openai.com/index/proaction)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-09-25T19:00:00+00:00
-- **記事URL：** https://openai.com/index/proaction
-- **一次ソース：** https://openai.com/index/proaction（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ███████░░░ 70 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.
 
 ---
 
