@@ -1,7 +1,7 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-10-10 10:06 JST (01:06 UTC)
+更新日時：2026-10-11 09:20 JST (00:20 UTC)
 
 ---
 
@@ -31,7 +31,7 @@
 | Importance     | ███████░░░ 78 |
 | Trust          | ██████████ 100 |
 | Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
+| Freshness      | ███████░░░ 70 |
 | Expression Risk| ░░░░░░░░░░ 0 |
 
 - **Trust Category：** `primary`
