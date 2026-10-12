@@ -1,45 +1,17 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-10-11 09:20 JST (00:20 UTC)
+更新日時：2026-10-12 09:41 JST (00:41 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 1 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 0 件を掲載しています。
 
-### 2026-10-09
-
-- [Asana cuts model costs 76x in browser tests with GPT-6.1 Sol](https://openai.com/index/asana-browser-agent) — [OpenAI News](#article-index-asana-browser-agent)
+*本日の掲載記事はありません。*
 
 [過去ログを見る](archive/)
-
----
-
-<a id="article-index-asana-browser-agent"></a>
-
-### [Asana cuts model costs 76x in browser tests with GPT-6.1 Sol](https://openai.com/index/asana-browser-agent)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-10-09T07:00:00+00:00
-- **記事URL：** https://openai.com/index/asana-browser-agent
-- **一次ソース：** https://openai.com/index/asana-browser-agent（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ███████░░░ 70 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.
 
 ---
 
