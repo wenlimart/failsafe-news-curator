@@ -1,32 +1,31 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-10-15 09:00 JST (00:00 UTC)
+更新日時：2026-10-16 08:44 JST (23:44 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 3 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 2 件を掲載しています。
 
-### 2026-10-14
+### 2026-10-15
 
-- [Amp puts AI agents to work beyond code with OpenAI models](https://openai.com/index/amp-beyond-coding) — [OpenAI News](#article-index-amp-beyond-coding)
-- [SentinelOne cuts malware analysis from weeks to hours](https://openai.com/index/sentinelone) — [OpenAI News](#article-index-sentinelone)
-- [The EU’s next chapter in AI is agentic](https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic) — [OpenAI News](#article-index-the-eus-next-chapter-in-ai-is-agentic)
+- [Bringing GPT-Rosalind to academic research labs](https://openai.com/index/introducing-the-rosalind-academic-plan) — [OpenAI News](#article-index-introducing-the-rosalind-academic-plan)
+- [Teaching students to think and learn through questions](https://openai.com/index/teaching-students-to-think-and-learn-through-questions) — [OpenAI News](#article-index-teaching-students-to-think-and-learn-through)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-index-amp-beyond-coding"></a>
+<a id="article-index-introducing-the-rosalind-academic-plan"></a>
 
-### [Amp puts AI agents to work beyond code with OpenAI models](https://openai.com/index/amp-beyond-coding)
+### [Bringing GPT-Rosalind to academic research labs](https://openai.com/index/introducing-the-rosalind-academic-plan)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-10-14T12:00:00+00:00
-- **記事URL：** https://openai.com/index/amp-beyond-coding
-- **一次ソース：** https://openai.com/index/amp-beyond-coding（`official_blog`）
+- **公開日時：** 2026-10-15T19:00:00+00:00
+- **記事URL：** https://openai.com/index/introducing-the-rosalind-academic-plan
+- **一次ソース：** https://openai.com/index/introducing-the-rosalind-academic-plan（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -41,18 +40,18 @@
 
 **本文プレビュー：**
 
-> See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.
+> Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.
 
 ---
 
-<a id="article-index-sentinelone"></a>
+<a id="article-index-teaching-students-to-think-and-learn-through"></a>
 
-### [SentinelOne cuts malware analysis from weeks to hours](https://openai.com/index/sentinelone)
+### [Teaching students to think and learn through questions](https://openai.com/index/teaching-students-to-think-and-learn-through-questions)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-10-14T12:00:00+00:00
-- **記事URL：** https://openai.com/index/sentinelone
-- **一次ソース：** https://openai.com/index/sentinelone（`official_blog`）
+- **公開日時：** 2026-10-15T13:00:00+00:00
+- **記事URL：** https://openai.com/index/teaching-students-to-think-and-learn-through-questions
+- **一次ソース：** https://openai.com/index/teaching-students-to-think-and-learn-through-questions（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -67,33 +66,7 @@
 
 **本文プレビュー：**
 
-> With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats.
-
----
-
-<a id="article-index-the-eus-next-chapter-in-ai-is-agentic"></a>
-
-### [The EU’s next chapter in AI is agentic](https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-10-14T00:00:00+00:00
-- **記事URL：** https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic
-- **一次ソース：** https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ███████░░░ 70 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value.
+> Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.
 
 ---
 
