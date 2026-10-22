@@ -1,30 +1,36 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-10-21 09:01 JST (00:01 UTC)
+更新日時：2026-10-22 09:05 JST (00:05 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 1 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 7 件を掲載しています。
 
-### 2026-10-20
+### 2026-10-21
 
-- [Franchisee reconciles cash in 94% less time with ChatGPT Work](https://openai.com/index/ted-taylor-restaurant) — [OpenAI News](#article-index-ted-taylor-restaurant)
+- [How AT&T is rethinking in-house legal work with OpenAI](https://openai.com/index/att-legal) — [OpenAI News](#article-index-att-legal)
+- [Broad access through consistent standards](https://openai.com/index/broad-access-through-consistent-standards) — [OpenAI News](#article-index-broad-access-through-consistent-standards)
+- [OpenAI models are coming to Google Cloud](https://openai.com/index/openai-models-google-cloud) — [OpenAI News](#article-index-openai-models-google-cloud)
+- [ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform](https://openai.com/index/chatgpt-ads-expands-26-new-countries) — [OpenAI News](#article-index-chatgpt-ads-expands-26-new-countries)
+- [Using thousands of AI agents to uncover new leads in biological data](https://openai.com/index/scaling-ai-research-for-complex-biological-data) — [OpenAI News](#article-index-scaling-ai-research-for-complex-biological-d)
+- [How we built ChatGPT’s novel ad stack for user trust and relevance](https://openai.com/index/building-chatgpt-ad-stack) — [OpenAI News](#article-index-building-chatgpt-ad-stack)
+- [Southeast Asia’s digital economy to hit $368 billion](https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/) — [Google AI Blog](#article-company-news-inside-google-around-the-globe-google)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-index-ted-taylor-restaurant"></a>
+<a id="article-index-att-legal"></a>
 
-### [Franchisee reconciles cash in 94% less time with ChatGPT Work](https://openai.com/index/ted-taylor-restaurant)
+### [How AT&T is rethinking in-house legal work with OpenAI](https://openai.com/index/att-legal)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-10-20T10:00:00+00:00
-- **記事URL：** https://openai.com/index/ted-taylor-restaurant
-- **一次ソース：** https://openai.com/index/ted-taylor-restaurant（`official_blog`）
+- **公開日時：** 2026-10-21T17:00:00+00:00
+- **記事URL：** https://openai.com/index/att-legal
+- **一次ソース：** https://openai.com/index/att-legal（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -39,7 +45,163 @@
 
 **本文プレビュー：**
 
-> An independent Schlotzsky’s and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.
+> AT&T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.
+
+---
+
+<a id="article-index-broad-access-through-consistent-standards"></a>
+
+### [Broad access through consistent standards](https://openai.com/index/broad-access-through-consistent-standards)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-10-21T21:00:00+00:00
+- **記事URL：** https://openai.com/index/broad-access-through-consistent-standards
+- **一次ソース：** https://openai.com/index/broad-access-through-consistent-standards（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ██████████ 100 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> How OpenAI works with distribution partners to uphold consistent safeguards, support responsible access, and clarify expectations in our Usage Policies.
+
+---
+
+<a id="article-index-openai-models-google-cloud"></a>
+
+### [OpenAI models are coming to Google Cloud](https://openai.com/index/openai-models-google-cloud)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-10-21T12:00:00+00:00
+- **記事URL：** https://openai.com/index/openai-models-google-cloud
+- **一次ソース：** https://openai.com/index/openai-models-google-cloud（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ██████████ 100 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.
+
+---
+
+<a id="article-index-chatgpt-ads-expands-26-new-countries"></a>
+
+### [ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform](https://openai.com/index/chatgpt-ads-expands-26-new-countries)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-10-21T13:00:00+00:00
+- **記事URL：** https://openai.com/index/chatgpt-ads-expands-26-new-countries
+- **一次ソース：** https://openai.com/index/chatgpt-ads-expands-26-new-countries（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ██████████ 100 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.
+
+---
+
+<a id="article-index-scaling-ai-research-for-complex-biological-d"></a>
+
+### [Using thousands of AI agents to uncover new leads in biological data](https://openai.com/index/scaling-ai-research-for-complex-biological-data)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-10-21T04:50:00+00:00
+- **記事URL：** https://openai.com/index/scaling-ai-research-for-complex-biological-data
+- **一次ソース：** https://openai.com/index/scaling-ai-research-for-complex-biological-data（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ██████████ 100 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.
+
+---
+
+<a id="article-index-building-chatgpt-ad-stack"></a>
+
+### [How we built ChatGPT’s novel ad stack for user trust and relevance](https://openai.com/index/building-chatgpt-ad-stack)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-10-21T07:00:00+00:00
+- **記事URL：** https://openai.com/index/building-chatgpt-ad-stack
+- **一次ソース：** https://openai.com/index/building-chatgpt-ad-stack（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ██████████ 100 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> Learn how OpenAI built ChatGPT’s LLM-powered ad stack to understand conversational intent, keep ads separate from answers, and deliver relevant ads at scale.
+
+---
+
+<a id="article-company-news-inside-google-around-the-globe-google"></a>
+
+### [Southeast Asia’s digital economy to hit $368 billion](https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/)
+
+- **ソース：** Google AI Blog（`official_blog`）
+- **公開日時：** 2026-10-21T04:00:00+00:00
+- **記事URL：** https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/
+- **一次ソース：** https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ██████████ 100 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.
 
 ---
 
