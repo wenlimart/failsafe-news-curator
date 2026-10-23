@@ -1,32 +1,30 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-10-23 09:04 JST (00:04 UTC)
+更新日時：2026-10-24 08:54 JST (23:54 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 2 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 1 件を掲載しています。
 
-### 2026-10-22
+### 2026-10-23
 
-- [Build more responsive apps with the Decisions API](https://openai.com/index/decisions-api) — [OpenAI News](#article-index-decisions-api)
-- [Uber brings ChatGPT Work to all employees with OpenAI](https://openai.com/index/uber-chatgpt-work-rollout) — [OpenAI News](#article-index-uber-chatgpt-work-rollout)
+- [Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)](https://openai.com/index/scaling-storage-one-billion-users-part-two) — [OpenAI News](#article-index-scaling-storage-one-billion-users-part-two)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-index-decisions-api"></a>
+<a id="article-index-scaling-storage-one-billion-users-part-two"></a>
 
-### [Build more responsive apps with the Decisions API](https://openai.com/index/decisions-api)
+### [Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)](https://openai.com/index/scaling-storage-one-billion-users-part-two)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-10-22T19:00:00+00:00
-- **記事URL：** https://openai.com/index/decisions-api
-- **一次ソース：** https://openai.com/index/decisions-api（`official_blog`）
-- **QAフラグ：** body_text_too_short
+- **公開日時：** 2026-10-23T17:00:00+00:00
+- **記事URL：** https://openai.com/index/scaling-storage-one-billion-users-part-two
+- **一次ソース：** https://openai.com/index/scaling-storage-one-billion-users-part-two（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -41,33 +39,7 @@
 
 **本文プレビュー：**
 
-> Fast, focused, low-cost decisions for any application.
-
----
-
-<a id="article-index-uber-chatgpt-work-rollout"></a>
-
-### [Uber brings ChatGPT Work to all employees with OpenAI](https://openai.com/index/uber-chatgpt-work-rollout)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-10-22T00:00:00+00:00
-- **記事URL：** https://openai.com/index/uber-chatgpt-work-rollout
-- **一次ソース：** https://openai.com/index/uber-chatgpt-work-rollout（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ███████░░░ 70 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> Uber is rolling out ChatGPT Work to more than 30,000 employees, helping teams research, analyze data, create presentations, and complete complex workflows.
+> Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.
 
 ---
 
