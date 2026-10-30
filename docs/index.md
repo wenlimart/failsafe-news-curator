@@ -1,7 +1,7 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-10-29 10:08 JST (01:08 UTC)
+更新日時：2026-10-30 10:15 JST (01:15 UTC)
 
 ---
 
@@ -9,24 +9,24 @@
 
 自動選別により、低リスク・一次情報・新鮮と判定された記事 3 件を掲載しています。
 
-### 2026-10-28
+### 2026-10-29
 
-- [OpenAI and ServiceNow expand partnership across enterprise workflows](https://openai.com/index/openai-servicenow-partnership-expansion) — [OpenAI News](#article-index-openai-servicenow-partnership-expansion)
-- [The future of the firm](https://openai.com/index/the-future-of-the-firm) — [OpenAI News](#article-index-the-future-of-the-firm)
-- [Legora is building the agentic operating system for legal work](https://openai.com/index/legora) — [OpenAI News](#article-index-legora)
+- [An updated Model Spec for more capable and beneficial AI](https://openai.com/index/updated-model-spec) — [OpenAI News](#article-index-updated-model-spec)
+- [How we detect frontier model misalignment](https://openai.com/index/how-we-detect-frontier-model-misalignment) — [OpenAI News](#article-index-how-we-detect-frontier-model-misalignment)
+- [How Ropes & Gray is developing AI for transactional diligence](https://openai.com/index/ropes-gray-ai-diligence) — [OpenAI News](#article-index-ropes-gray-ai-diligence)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-index-openai-servicenow-partnership-expansion"></a>
+<a id="article-index-updated-model-spec"></a>
 
-### [OpenAI and ServiceNow expand partnership across enterprise workflows](https://openai.com/index/openai-servicenow-partnership-expansion)
+### [An updated Model Spec for more capable and beneficial AI](https://openai.com/index/updated-model-spec)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-10-28T13:15:00+00:00
-- **記事URL：** https://openai.com/index/openai-servicenow-partnership-expansion
-- **一次ソース：** https://openai.com/index/openai-servicenow-partnership-expansion（`official_blog`）
+- **公開日時：** 2026-10-29T17:00:00+00:00
+- **記事URL：** https://openai.com/index/updated-model-spec
+- **一次ソース：** https://openai.com/index/updated-model-spec（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -41,19 +41,18 @@
 
 **本文プレビュー：**
 
-> OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.
+> OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.
 
 ---
 
-<a id="article-index-the-future-of-the-firm"></a>
+<a id="article-index-how-we-detect-frontier-model-misalignment"></a>
 
-### [The future of the firm](https://openai.com/index/the-future-of-the-firm)
+### [How we detect frontier model misalignment](https://openai.com/index/how-we-detect-frontier-model-misalignment)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-10-28T10:00:00+00:00
-- **記事URL：** https://openai.com/index/the-future-of-the-firm
-- **一次ソース：** https://openai.com/index/the-future-of-the-firm（`official_blog`）
-- **QAフラグ：** body_text_too_short
+- **公開日時：** 2026-10-29T09:00:00+00:00
+- **記事URL：** https://openai.com/index/how-we-detect-frontier-model-misalignment
+- **一次ソース：** https://openai.com/index/how-we-detect-frontier-model-misalignment（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -68,18 +67,18 @@
 
 **本文プレビュー：**
 
-> How AI might enter the org chart—beneath, beside, and between us.
+> OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.
 
 ---
 
-<a id="article-index-legora"></a>
+<a id="article-index-ropes-gray-ai-diligence"></a>
 
-### [Legora is building the agentic operating system for legal work](https://openai.com/index/legora)
+### [How Ropes & Gray is developing AI for transactional diligence](https://openai.com/index/ropes-gray-ai-diligence)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-10-28T09:30:00+00:00
-- **記事URL：** https://openai.com/index/legora
-- **一次ソース：** https://openai.com/index/legora（`official_blog`）
+- **公開日時：** 2026-10-29T07:00:00+00:00
+- **記事URL：** https://openai.com/index/ropes-gray-ai-diligence
+- **一次ソース：** https://openai.com/index/ropes-gray-ai-diligence（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -94,7 +93,7 @@
 
 **本文プレビュー：**
 
-> See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.
+> Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and reports before advising clients.
 
 ---
 
