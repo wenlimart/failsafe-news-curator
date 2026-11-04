@@ -1,33 +1,32 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-11-03 12:00 JST (03:00 UTC)
+更新日時：2026-11-04 10:33 JST (01:33 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 4 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 3 件を掲載しています。
 
-### 2026-11-02
+### 2026-11-03
 
-- [Scaling Git at OpenAI](https://openai.com/index/scaling-git-at-openai) — [OpenAI News](#article-index-scaling-git-at-openai)
-- [Introducing the Grid Protectors Program](https://openai.com/index/grid-protectors-program) — [OpenAI News](#article-index-grid-protectors-program)
-- [Qodo builds context into AI code review with Codex](https://openai.com/index/qodo-codex-plugin) — [OpenAI News](#article-index-qodo-codex-plugin)
-- [The latest AI news we announced in October 2026](https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/) — [Google AI Blog](#article-innovation-and-ai-technology-ai-google-ai-updates-)
+- [Accelerating engineering for the physical world](https://openai.com/index/accelerating-engineering-for-the-physical-world) — [OpenAI News](#article-index-accelerating-engineering-for-the-physical-wo)
+- [Heimstaden is changing residential real estate management with AI](https://openai.com/index/heimstaden) — [OpenAI News](#article-index-heimstaden)
+- [OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer](https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer) — [OpenAI News](#article-index-jill-hazelbaker-chief-corporate-affairs-offi)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-index-scaling-git-at-openai"></a>
+<a id="article-index-accelerating-engineering-for-the-physical-wo"></a>
 
-### [Scaling Git at OpenAI](https://openai.com/index/scaling-git-at-openai)
+### [Accelerating engineering for the physical world](https://openai.com/index/accelerating-engineering-for-the-physical-world)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-02T15:30:00+00:00
-- **記事URL：** https://openai.com/index/scaling-git-at-openai
-- **一次ソース：** https://openai.com/index/scaling-git-at-openai（`official_blog`）
+- **公開日時：** 2026-11-03T12:00:00+00:00
+- **記事URL：** https://openai.com/index/accelerating-engineering-for-the-physical-world
+- **一次ソース：** https://openai.com/index/accelerating-engineering-for-the-physical-world（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -42,18 +41,18 @@
 
 **本文プレビュー：**
 
-> How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.
+> Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.
 
 ---
 
-<a id="article-index-grid-protectors-program"></a>
+<a id="article-index-heimstaden"></a>
 
-### [Introducing the Grid Protectors Program](https://openai.com/index/grid-protectors-program)
+### [Heimstaden is changing residential real estate management with AI](https://openai.com/index/heimstaden)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-02T15:00:00+00:00
-- **記事URL：** https://openai.com/index/grid-protectors-program
-- **一次ソース：** https://openai.com/index/grid-protectors-program（`official_blog`）
+- **公開日時：** 2026-11-03T08:00:00+00:00
+- **記事URL：** https://openai.com/index/heimstaden
+- **一次ソース：** https://openai.com/index/heimstaden（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -68,18 +67,18 @@
 
 **本文プレビュー：**
 
-> OpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliability and protect consumer electricity costs.
+> Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empower employees across Europe.
 
 ---
 
-<a id="article-index-qodo-codex-plugin"></a>
+<a id="article-index-jill-hazelbaker-chief-corporate-affairs-offi"></a>
 
-### [Qodo builds context into AI code review with Codex](https://openai.com/index/qodo-codex-plugin)
+### [OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer](https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-02T00:00:00+00:00
-- **記事URL：** https://openai.com/index/qodo-codex-plugin
-- **一次ソース：** https://openai.com/index/qodo-codex-plugin（`official_blog`）
+- **公開日時：** 2026-11-03T00:00:00+00:00
+- **記事URL：** https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer
+- **一次ソース：** https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -94,34 +93,7 @@
 
 **本文プレビュー：**
 
-> Qodo brings company knowledge and coding standards into Codex, helping developers catch P0 issues across repositories before opening a pull request.
-
----
-
-<a id="article-innovation-and-ai-technology-ai-google-ai-updates-"></a>
-
-### [The latest AI news we announced in October 2026](https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/)
-
-- **ソース：** Google AI Blog（`official_blog`）
-- **公開日時：** 2026-11-02T17:45:00+00:00
-- **記事URL：** https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/
-- **一次ソース：** https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/（`official_blog`）
-- **QAフラグ：** body_text_too_short
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> Here are Google’s latest AI updates from October 2026
+> Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning.
 
 ---
 
