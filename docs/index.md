@@ -1,32 +1,33 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-11-04 10:33 JST (01:33 UTC)
+更新日時：2026-11-05 10:39 JST (01:39 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 3 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 4 件を掲載しています。
 
-### 2026-11-03
+### 2026-11-04
 
-- [Accelerating engineering for the physical world](https://openai.com/index/accelerating-engineering-for-the-physical-world) — [OpenAI News](#article-index-accelerating-engineering-for-the-physical-wo)
-- [Heimstaden is changing residential real estate management with AI](https://openai.com/index/heimstaden) — [OpenAI News](#article-index-heimstaden)
-- [OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer](https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer) — [OpenAI News](#article-index-jill-hazelbaker-chief-corporate-affairs-offi)
+- [OpenAI to acquire Pierre Computer Company, Inc.](https://openai.com/index/openai-to-acquire-pierre) — [OpenAI News](#article-index-openai-to-acquire-pierre)
+- [A thousand fewer paths to root](https://openai.com/index/a-thousand-fewer-paths-to-root) — [OpenAI News](#article-index-a-thousand-fewer-paths-to-root)
+- [Introducing Images 2.6](https://openai.com/index/introducing-images-2-6) — [OpenAI News](#article-index-introducing-images-2-6)
+- [DevRev delivers autonomous self-service with GPT-6.1 Sol](https://openai.com/index/devrev-enterprise-self-service) — [OpenAI News](#article-index-devrev-enterprise-self-service)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-index-accelerating-engineering-for-the-physical-wo"></a>
+<a id="article-index-openai-to-acquire-pierre"></a>
 
-### [Accelerating engineering for the physical world](https://openai.com/index/accelerating-engineering-for-the-physical-world)
+### [OpenAI to acquire Pierre Computer Company, Inc.](https://openai.com/index/openai-to-acquire-pierre)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-03T12:00:00+00:00
-- **記事URL：** https://openai.com/index/accelerating-engineering-for-the-physical-world
-- **一次ソース：** https://openai.com/index/accelerating-engineering-for-the-physical-world（`official_blog`）
+- **公開日時：** 2026-11-04T14:30:00+00:00
+- **記事URL：** https://openai.com/index/openai-to-acquire-pierre
+- **一次ソース：** https://openai.com/index/openai-to-acquire-pierre（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -41,18 +42,18 @@
 
 **本文プレビュー：**
 
-> Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.
+> OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.
 
 ---
 
-<a id="article-index-heimstaden"></a>
+<a id="article-index-a-thousand-fewer-paths-to-root"></a>
 
-### [Heimstaden is changing residential real estate management with AI](https://openai.com/index/heimstaden)
+### [A thousand fewer paths to root](https://openai.com/index/a-thousand-fewer-paths-to-root)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-03T08:00:00+00:00
-- **記事URL：** https://openai.com/index/heimstaden
-- **一次ソース：** https://openai.com/index/heimstaden（`official_blog`）
+- **公開日時：** 2026-11-04T08:00:00+00:00
+- **記事URL：** https://openai.com/index/a-thousand-fewer-paths-to-root
+- **一次ソース：** https://openai.com/index/a-thousand-fewer-paths-to-root（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -67,18 +68,18 @@
 
 **本文プレビュー：**
 
-> Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empower employees across Europe.
+> OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel.
 
 ---
 
-<a id="article-index-jill-hazelbaker-chief-corporate-affairs-offi"></a>
+<a id="article-index-introducing-images-2-6"></a>
 
-### [OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer](https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer)
+### [Introducing Images 2.6](https://openai.com/index/introducing-images-2-6)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-03T00:00:00+00:00
-- **記事URL：** https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer
-- **一次ソース：** https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer（`official_blog`）
+- **公開日時：** 2026-11-04T00:00:00+00:00
+- **記事URL：** https://openai.com/index/introducing-images-2-6
+- **一次ソース：** https://openai.com/index/introducing-images-2-6（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -93,7 +94,33 @@
 
 **本文プレビュー：**
 
-> Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning.
+> Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API.
+
+---
+
+<a id="article-index-devrev-enterprise-self-service"></a>
+
+### [DevRev delivers autonomous self-service with GPT-6.1 Sol](https://openai.com/index/devrev-enterprise-self-service)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-11-04T00:00:00+00:00
+- **記事URL：** https://openai.com/index/devrev-enterprise-self-service
+- **一次ソース：** https://openai.com/index/devrev-enterprise-self-service（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ███████░░░ 70 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service.
 
 ---
 
