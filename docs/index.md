@@ -1,33 +1,32 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-11-05 10:39 JST (01:39 UTC)
+更新日時：2026-11-06 10:42 JST (01:42 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 4 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 3 件を掲載しています。
 
-### 2026-11-04
+### 2026-11-05
 
-- [OpenAI to acquire Pierre Computer Company, Inc.](https://openai.com/index/openai-to-acquire-pierre) — [OpenAI News](#article-index-openai-to-acquire-pierre)
-- [A thousand fewer paths to root](https://openai.com/index/a-thousand-fewer-paths-to-root) — [OpenAI News](#article-index-a-thousand-fewer-paths-to-root)
-- [Introducing Images 2.6](https://openai.com/index/introducing-images-2-6) — [OpenAI News](#article-index-introducing-images-2-6)
-- [DevRev delivers autonomous self-service with GPT-6.1 Sol](https://openai.com/index/devrev-enterprise-self-service) — [OpenAI News](#article-index-devrev-enterprise-self-service)
+- [Cult.fit builds operational muscle with Codex](https://openai.com/index/cultfit-builds-with-codex) — [OpenAI News](#article-index-cultfit-builds-with-codex)
+- [Merge builds product and business tools with OpenAI technology](https://openai.com/index/merge-builds-with-openai) — [OpenAI News](#article-index-merge-builds-with-openai)
+- [Flipsnack grows product signups with conversion optimization](https://openai.com/ads/customers/flipsnack) — [OpenAI News](#article-ads-customers-flipsnack)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-index-openai-to-acquire-pierre"></a>
+<a id="article-index-cultfit-builds-with-codex"></a>
 
-### [OpenAI to acquire Pierre Computer Company, Inc.](https://openai.com/index/openai-to-acquire-pierre)
+### [Cult.fit builds operational muscle with Codex](https://openai.com/index/cultfit-builds-with-codex)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-04T14:30:00+00:00
-- **記事URL：** https://openai.com/index/openai-to-acquire-pierre
-- **一次ソース：** https://openai.com/index/openai-to-acquire-pierre（`official_blog`）
+- **公開日時：** 2026-11-05T20:00:00+00:00
+- **記事URL：** https://openai.com/index/cultfit-builds-with-codex
+- **一次ソース：** https://openai.com/index/cultfit-builds-with-codex（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -42,18 +41,18 @@
 
 **本文プレビュー：**
 
-> OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.
+> Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.
 
 ---
 
-<a id="article-index-a-thousand-fewer-paths-to-root"></a>
+<a id="article-index-merge-builds-with-openai"></a>
 
-### [A thousand fewer paths to root](https://openai.com/index/a-thousand-fewer-paths-to-root)
+### [Merge builds product and business tools with OpenAI technology](https://openai.com/index/merge-builds-with-openai)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-04T08:00:00+00:00
-- **記事URL：** https://openai.com/index/a-thousand-fewer-paths-to-root
-- **一次ソース：** https://openai.com/index/a-thousand-fewer-paths-to-root（`official_blog`）
+- **公開日時：** 2026-11-05T08:00:00+00:00
+- **記事URL：** https://openai.com/index/merge-builds-with-openai
+- **一次ソース：** https://openai.com/index/merge-builds-with-openai（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -68,18 +67,18 @@
 
 **本文プレビュー：**
 
-> OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel.
+> Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updates.
 
 ---
 
-<a id="article-index-introducing-images-2-6"></a>
+<a id="article-ads-customers-flipsnack"></a>
 
-### [Introducing Images 2.6](https://openai.com/index/introducing-images-2-6)
+### [Flipsnack grows product signups with conversion optimization](https://openai.com/ads/customers/flipsnack)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-04T00:00:00+00:00
-- **記事URL：** https://openai.com/index/introducing-images-2-6
-- **一次ソース：** https://openai.com/index/introducing-images-2-6（`official_blog`）
+- **公開日時：** 2026-11-05T00:45:15+00:00
+- **記事URL：** https://openai.com/ads/customers/flipsnack
+- **一次ソース：** https://openai.com/ads/customers/flipsnack（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -94,33 +93,7 @@
 
 **本文プレビュー：**
 
-> Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API.
-
----
-
-<a id="article-index-devrev-enterprise-self-service"></a>
-
-### [DevRev delivers autonomous self-service with GPT-6.1 Sol](https://openai.com/index/devrev-enterprise-self-service)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-04T00:00:00+00:00
-- **記事URL：** https://openai.com/index/devrev-enterprise-self-service
-- **一次ソース：** https://openai.com/index/devrev-enterprise-self-service（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ███████░░░ 70 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service.
+> Flipsnack focused its ChatGPT Ads campaigns on getting people to try its product, growing registrations while lowering the cost per signup.
 
 ---
 
