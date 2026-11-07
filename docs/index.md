@@ -1,32 +1,31 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-11-06 10:42 JST (01:42 UTC)
+更新日時：2026-11-07 10:03 JST (01:03 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 3 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 2 件を掲載しています。
 
-### 2026-11-05
+### 2026-11-06
 
-- [Cult.fit builds operational muscle with Codex](https://openai.com/index/cultfit-builds-with-codex) — [OpenAI News](#article-index-cultfit-builds-with-codex)
-- [Merge builds product and business tools with OpenAI technology](https://openai.com/index/merge-builds-with-openai) — [OpenAI News](#article-index-merge-builds-with-openai)
-- [Flipsnack grows product signups with conversion optimization](https://openai.com/ads/customers/flipsnack) — [OpenAI News](#article-ads-customers-flipsnack)
+- [Partnering with Hacktron to find vulnerabilities in OpenAI’s systems](https://openai.com/index/partnering-with-hacktron) — [OpenAI News](#article-index-partnering-with-hacktron)
+- [Measuring how AI agents handle everyday wet-lab science](https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science) — [OpenAI News](#article-index-measuring-how-ai-agents-handle-wet-lab-scien)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-index-cultfit-builds-with-codex"></a>
+<a id="article-index-partnering-with-hacktron"></a>
 
-### [Cult.fit builds operational muscle with Codex](https://openai.com/index/cultfit-builds-with-codex)
+### [Partnering with Hacktron to find vulnerabilities in OpenAI’s systems](https://openai.com/index/partnering-with-hacktron)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-05T20:00:00+00:00
-- **記事URL：** https://openai.com/index/cultfit-builds-with-codex
-- **一次ソース：** https://openai.com/index/cultfit-builds-with-codex（`official_blog`）
+- **公開日時：** 2026-11-06T08:00:00+00:00
+- **記事URL：** https://openai.com/index/partnering-with-hacktron
+- **一次ソース：** https://openai.com/index/partnering-with-hacktron（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -41,44 +40,18 @@
 
 **本文プレビュー：**
 
-> Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.
+> OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.
 
 ---
 
-<a id="article-index-merge-builds-with-openai"></a>
+<a id="article-index-measuring-how-ai-agents-handle-wet-lab-scien"></a>
 
-### [Merge builds product and business tools with OpenAI technology](https://openai.com/index/merge-builds-with-openai)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-05T08:00:00+00:00
-- **記事URL：** https://openai.com/index/merge-builds-with-openai
-- **一次ソース：** https://openai.com/index/merge-builds-with-openai（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updates.
-
----
-
-<a id="article-ads-customers-flipsnack"></a>
-
-### [Flipsnack grows product signups with conversion optimization](https://openai.com/ads/customers/flipsnack)
+### [Measuring how AI agents handle everyday wet-lab science](https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-05T00:45:15+00:00
-- **記事URL：** https://openai.com/ads/customers/flipsnack
-- **一次ソース：** https://openai.com/ads/customers/flipsnack（`official_blog`）
+- **公開日時：** 2026-11-06T00:00:00+00:00
+- **記事URL：** https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science
+- **一次ソース：** https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -93,7 +66,7 @@
 
 **本文プレビュー：**
 
-> Flipsnack focused its ChatGPT Ads campaigns on getting people to try its product, growing registrations while lowering the cost per signup.
+> OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.
 
 ---
 
