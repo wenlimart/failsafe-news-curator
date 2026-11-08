@@ -1,18 +1,17 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-11-07 10:03 JST (01:03 UTC)
+更新日時：2026-11-08 09:50 JST (00:50 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 2 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 1 件を掲載しています。
 
 ### 2026-11-06
 
 - [Partnering with Hacktron to find vulnerabilities in OpenAI’s systems](https://openai.com/index/partnering-with-hacktron) — [OpenAI News](#article-index-partnering-with-hacktron)
-- [Measuring how AI agents handle everyday wet-lab science](https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science) — [OpenAI News](#article-index-measuring-how-ai-agents-handle-wet-lab-scien)
 
 [過去ログを見る](archive/)
 
@@ -32,32 +31,6 @@
 | Importance     | ███████░░░ 78 |
 | Trust          | ██████████ 100 |
 | Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.
-
----
-
-<a id="article-index-measuring-how-ai-agents-handle-wet-lab-scien"></a>
-
-### [Measuring how AI agents handle everyday wet-lab science](https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-06T00:00:00+00:00
-- **記事URL：** https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science
-- **一次ソース：** https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
 | Freshness      | ███████░░░ 70 |
 | Expression Risk| ░░░░░░░░░░ 0 |
 
@@ -66,7 +39,7 @@
 
 **本文プレビュー：**
 
-> OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.
+> OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.
 
 ---
 
