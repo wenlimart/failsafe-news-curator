@@ -1,32 +1,31 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-11-10 12:42 JST (03:42 UTC)
+更新日時：2026-11-11 10:22 JST (01:22 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 3 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 1 件を掲載しています。
 
-### 2026-11-09
+### 2026-11-12
 
-- [ChatGPT Enterprise now available in AWS Marketplace](https://openai.com/index/chatgpt-enterprise-aws-marketplace) — [OpenAI News](#article-index-chatgpt-enterprise-aws-marketplace)
-- [CodeRabbit scales agentic software development and ships 20x more](https://openai.com/index/coderabbit-codex-daybreak) — [OpenAI News](#article-index-coderabbit-codex-daybreak)
-- [Kuken Industries searches 70 years of drawings in minutes](https://openai.com/index/kuken) — [OpenAI News](#article-index-kuken)
+- [Gilbert + Tobin rethinks the business of law with AI](https://openai.com/index/gilbert-tobin-sam-nickless) — [OpenAI News](#article-index-gilbert-tobin-sam-nickless)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-index-chatgpt-enterprise-aws-marketplace"></a>
+<a id="article-index-gilbert-tobin-sam-nickless"></a>
 
-### [ChatGPT Enterprise now available in AWS Marketplace](https://openai.com/index/chatgpt-enterprise-aws-marketplace)
+### [Gilbert + Tobin rethinks the business of law with AI](https://openai.com/index/gilbert-tobin-sam-nickless)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-09T19:00:00+00:00
-- **記事URL：** https://openai.com/index/chatgpt-enterprise-aws-marketplace
-- **一次ソース：** https://openai.com/index/chatgpt-enterprise-aws-marketplace（`official_blog`）
+- **公開日時：** 2026-11-12T00:00:00+00:00
+- **記事URL：** https://openai.com/index/gilbert-tobin-sam-nickless
+- **一次ソース：** https://openai.com/index/gilbert-tobin-sam-nickless（`official_blog`）
+- **QAフラグ：** body_text_too_short
 
 | スコア | 値 |
 |--------|-----|
@@ -41,59 +40,7 @@
 
 **本文プレビュー：**
 
-> ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.
-
----
-
-<a id="article-index-coderabbit-codex-daybreak"></a>
-
-### [CodeRabbit scales agentic software development and ships 20x more](https://openai.com/index/coderabbit-codex-daybreak)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-09T08:00:00+00:00
-- **記事URL：** https://openai.com/index/coderabbit-codex-daybreak
-- **一次ソース：** https://openai.com/index/coderabbit-codex-daybreak（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.
-
----
-
-<a id="article-index-kuken"></a>
-
-### [Kuken Industries searches 70 years of drawings in minutes](https://openai.com/index/kuken)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-09T08:00:00+00:00
-- **記事URL：** https://openai.com/index/kuken
-- **一次ソース：** https://openai.com/index/kuken（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.
+> A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.
 
 ---
 
