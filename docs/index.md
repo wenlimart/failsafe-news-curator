@@ -1,34 +1,59 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-11-18 12:02 JST (03:02 UTC)
+更新日時：2026-11-19 11:43 JST (02:43 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 5 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 7 件を掲載しています。
 
-### 2026-11-17
+### 2026-11-18
 
-- [Put Gemini to work for you](https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/) — [Google AI Blog](#article-innovation-and-ai-products-gemini-app-tasks-in-gem)
-- [Introducing GPT-6.2 Astra and Sol](https://openai.com/index/introducing-gpt-6-2-astra-sol) — [OpenAI News](#article-index-introducing-gpt-6-2-astra-sol)
-- [Strengthening NATO and allied cyber defenses with AI](https://openai.com/index/strengthening-nato-allied-cyber-defences-ai) — [OpenAI News](#article-index-strengthening-nato-allied-cyber-defences-ai)
-- [Introducing ChatGPT for Sales](https://openai.com/index/introducing-chatgpt-for-sales) — [OpenAI News](#article-index-introducing-chatgpt-for-sales)
-- [Astra for Law leads in legal intelligence](https://openai.com/index/astra-law-6-2) — [OpenAI News](#article-index-astra-law-6-2)
+- [The Gemini app is now available on lower-memory Android devices.](https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/) — [Google AI Blog](#article-innovation-and-ai-products-gemini-app-gemini-lower)
+- [The Silent Consensus](https://openai.com/index/the-silent-consensus) — [OpenAI News](#article-index-the-silent-consensus)
+- [Research acceleration: The jagged frontier](https://openai.com/index/research-acceleration-jagged-frontier) — [OpenAI News](#article-index-research-acceleration-jagged-frontier)
+- [Inside the Codex sandbox](https://openai.com/index/inside-the-codex-sandbox) — [OpenAI News](#article-index-inside-the-codex-sandbox)
+- [Managing frontier AI risk: From training to deployment](https://openai.com/index/managing-frontier-ai-risk) — [OpenAI News](#article-index-managing-frontier-ai-risk)
+- [Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT](https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership) — [OpenAI News](#article-index-le-groupe-figaro-and-openai-announce-partner)
+- [Advancing chip design with OpenAI models](https://openai.com/index/advancing-chip-design-with-our-models) — [OpenAI News](#article-index-advancing-chip-design-with-our-models)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-innovation-and-ai-products-gemini-app-tasks-in-gem"></a>
+<a id="article-innovation-and-ai-products-gemini-app-gemini-lower"></a>
 
-### [Put Gemini to work for you](https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/)
+### [The Gemini app is now available on lower-memory Android devices.](https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/)
 
 - **ソース：** Google AI Blog（`official_blog`）
-- **公開日時：** 2026-11-17T17:00:00+00:00
-- **記事URL：** https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/
-- **一次ソース：** https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/（`official_blog`）
+- **公開日時：** 2026-11-18T17:00:00+00:00
+- **記事URL：** https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/
+- **一次ソース：** https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/（`official_blog`）
+- **QAフラグ：** body_text_too_short
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ██████████ 100 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+---
+
+<a id="article-index-the-silent-consensus"></a>
+
+### [The Silent Consensus](https://openai.com/index/the-silent-consensus)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-11-18T10:00:00+00:00
+- **記事URL：** https://openai.com/index/the-silent-consensus
+- **一次ソース：** https://openai.com/index/the-silent-consensus（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -43,18 +68,18 @@
 
 **本文プレビュー：**
 
-> Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on your behalf.
+> Dean Ball, Head of Strategic Futures at OpenAI, examines how more capable AI could reshape society and how people can retain control of their institutions.
 
 ---
 
-<a id="article-index-introducing-gpt-6-2-astra-sol"></a>
+<a id="article-index-research-acceleration-jagged-frontier"></a>
 
-### [Introducing GPT-6.2 Astra and Sol](https://openai.com/index/introducing-gpt-6-2-astra-sol)
+### [Research acceleration: The jagged frontier](https://openai.com/index/research-acceleration-jagged-frontier)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-17T17:45:00+00:00
-- **記事URL：** https://openai.com/index/introducing-gpt-6-2-astra-sol
-- **一次ソース：** https://openai.com/index/introducing-gpt-6-2-astra-sol（`official_blog`）
+- **公開日時：** 2026-11-18T08:00:00+00:00
+- **記事URL：** https://openai.com/index/research-acceleration-jagged-frontier
+- **一次ソース：** https://openai.com/index/research-acceleration-jagged-frontier（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -69,18 +94,70 @@
 
 **本文プレビュー：**
 
-> Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.
+> OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.
 
 ---
 
-<a id="article-index-strengthening-nato-allied-cyber-defences-ai"></a>
+<a id="article-index-inside-the-codex-sandbox"></a>
 
-### [Strengthening NATO and allied cyber defenses with AI](https://openai.com/index/strengthening-nato-allied-cyber-defences-ai)
+### [Inside the Codex sandbox](https://openai.com/index/inside-the-codex-sandbox)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-17T00:00:00+00:00
-- **記事URL：** https://openai.com/index/strengthening-nato-allied-cyber-defences-ai
-- **一次ソース：** https://openai.com/index/strengthening-nato-allied-cyber-defences-ai（`official_blog`）
+- **公開日時：** 2026-11-18T08:00:00+00:00
+- **記事URL：** https://openai.com/index/inside-the-codex-sandbox
+- **一次ソース：** https://openai.com/index/inside-the-codex-sandbox（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ██████████ 100 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> See how Codex runs commands on your machine while enforcing the filesystem and network limits you control across macOS, Linux, and Windows.
+
+---
+
+<a id="article-index-managing-frontier-ai-risk"></a>
+
+### [Managing frontier AI risk: From training to deployment](https://openai.com/index/managing-frontier-ai-risk)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-11-18T06:00:00+00:00
+- **記事URL：** https://openai.com/index/managing-frontier-ai-risk
+- **一次ソース：** https://openai.com/index/managing-frontier-ai-risk（`official_blog`）
+
+| スコア | 値 |
+|--------|-----|
+| Importance     | ███████░░░ 78 |
+| Trust          | ██████████ 100 |
+| Risk（低=安全）| █░░░░░░░░░ 15 |
+| Freshness      | ██████████ 100 |
+| Expression Risk| ░░░░░░░░░░ 0 |
+
+- **Trust Category：** `primary`
+- **判定理由：** 全条件クリア
+
+**本文プレビュー：**
+
+> OpenAI explains how it manages frontier AI risk from training through deployment with model alignment, sandboxing, blocking safeguards, and monitoring.
+
+---
+
+<a id="article-index-le-groupe-figaro-and-openai-announce-partner"></a>
+
+### [Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT](https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership)
+
+- **ソース：** OpenAI News（`official_blog`）
+- **公開日時：** 2026-11-18T00:00:00+00:00
+- **記事URL：** https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership
+- **一次ソース：** https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -95,44 +172,18 @@
 
 **本文プレビュー：**
 
-> How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.
+> Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories.
 
 ---
 
-<a id="article-index-introducing-chatgpt-for-sales"></a>
+<a id="article-index-advancing-chip-design-with-our-models"></a>
 
-### [Introducing ChatGPT for Sales](https://openai.com/index/introducing-chatgpt-for-sales)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-17T08:00:00+00:00
-- **記事URL：** https://openai.com/index/introducing-chatgpt-for-sales
-- **一次ソース：** https://openai.com/index/introducing-chatgpt-for-sales（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.
-
----
-
-<a id="article-index-astra-law-6-2"></a>
-
-### [Astra for Law leads in legal intelligence](https://openai.com/index/astra-law-6-2)
+### [Advancing chip design with OpenAI models](https://openai.com/index/advancing-chip-design-with-our-models)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-17T00:00:00+00:00
-- **記事URL：** https://openai.com/index/astra-law-6-2
-- **一次ソース：** https://openai.com/index/astra-law-6-2（`official_blog`）
+- **公開日時：** 2026-11-18T00:00:00+00:00
+- **記事URL：** https://openai.com/index/advancing-chip-design-with-our-models
+- **一次ソース：** https://openai.com/index/advancing-chip-design-with-our-models（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -147,7 +198,7 @@
 
 **本文プレビュー：**
 
-> Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.
+> OpenAI models optimized circuits used in Jalapeño silicon and improved RISC‑V core designs, showing progress in AI-assisted chip design with GPT‑6 Astra.
 
 ---
 
