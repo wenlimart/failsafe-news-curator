@@ -1,34 +1,31 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-11-20 11:28 JST (02:28 UTC)
+更新日時：2026-11-21 11:40 JST (02:40 UTC)
 
 ---
 
 ## 今日の掲載記事
 
-自動選別により、低リスク・一次情報・新鮮と判定された記事 5 件を掲載しています。
+自動選別により、低リスク・一次情報・新鮮と判定された記事 2 件を掲載しています。
 
-### 2026-11-19
+### 2026-11-20
 
-- [How OpenAI’s Performance Factory keeps ChatGPT fast](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast) — [OpenAI News](#article-index-how-openai-performance-factory-keeps-chatgpt)
-- [See PR scans in action](https://openai.com/business/learn/pr-scans-demo) — [OpenAI News](#article-business-learn-pr-scans-demo)
-- [Get started with Daybreak Blue](https://openai.com/business/learn/daybreak-blue-onboarding-demo) — [OpenAI News](#article-business-learn-daybreak-blue-onboarding-demo)
-- [Introducing Tool Retrieval in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/) — [Google AI Blog](#article-innovation-and-ai-technology-developers-tools-gemi)
-- [Walter Isaacson on curiosity and creativity in the AI age.](https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/) — [Google AI Blog](#article-innovation-and-ai-technology-ai-dialogues-walter-i)
+- [Combatting adversarial distillation](https://openai.com/index/combatting-adversarial-distillation) — [OpenAI News](#article-index-combatting-adversarial-distillation)
+- [Hebbia sees improvements in financial research with GPT-6 Astra](https://openai.com/business/customer-stories/hebbia) — [OpenAI News](#article-business-customer-stories-hebbia)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-index-how-openai-performance-factory-keeps-chatgpt"></a>
+<a id="article-index-combatting-adversarial-distillation"></a>
 
-### [How OpenAI’s Performance Factory keeps ChatGPT fast](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast)
+### [Combatting adversarial distillation](https://openai.com/index/combatting-adversarial-distillation)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-19T08:00:00+00:00
-- **記事URL：** https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast
-- **一次ソース：** https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast（`official_blog`）
+- **公開日時：** 2026-11-20T10:00:00+00:00
+- **記事URL：** https://openai.com/index/combatting-adversarial-distillation
+- **一次ソース：** https://openai.com/index/combatting-adversarial-distillation（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -43,18 +40,18 @@
 
 **本文プレビュー：**
 
-> Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.
+> OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.
 
 ---
 
-<a id="article-business-learn-pr-scans-demo"></a>
+<a id="article-business-customer-stories-hebbia"></a>
 
-### [See PR scans in action](https://openai.com/business/learn/pr-scans-demo)
+### [Hebbia sees improvements in financial research with GPT-6 Astra](https://openai.com/business/customer-stories/hebbia)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-19T00:00:00+00:00
-- **記事URL：** https://openai.com/business/learn/pr-scans-demo
-- **一次ソース：** https://openai.com/business/learn/pr-scans-demo（`official_blog`）
+- **公開日時：** 2026-11-20T00:00:00+00:00
+- **記事URL：** https://openai.com/business/customer-stories/hebbia
+- **一次ソース：** https://openai.com/business/customer-stories/hebbia（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -69,82 +66,7 @@
 
 **本文プレビュー：**
 
-> Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow.
-
----
-
-<a id="article-business-learn-daybreak-blue-onboarding-demo"></a>
-
-### [Get started with Daybreak Blue](https://openai.com/business/learn/daybreak-blue-onboarding-demo)
-
-- **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-19T00:00:00+00:00
-- **記事URL：** https://openai.com/business/learn/daybreak-blue-onboarding-demo
-- **一次ソース：** https://openai.com/business/learn/daybreak-blue-onboarding-demo（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ███████░░░ 70 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started.
-
----
-
-<a id="article-innovation-and-ai-technology-developers-tools-gemi"></a>
-
-### [Introducing Tool Retrieval in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/)
-
-- **ソース：** Google AI Blog（`official_blog`）
-- **公開日時：** 2026-11-19T18:00:00+00:00
-- **記事URL：** https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/
-- **一次ソース：** https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/（`official_blog`）
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
-
-**本文プレビュー：**
-
-> Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API.
-
----
-
-<a id="article-innovation-and-ai-technology-ai-dialogues-walter-i"></a>
-
-### [Walter Isaacson on curiosity and creativity in the AI age.](https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/)
-
-- **ソース：** Google AI Blog（`official_blog`）
-- **公開日時：** 2026-11-19T17:00:00+00:00
-- **記事URL：** https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/
-- **一次ソース：** https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/（`official_blog`）
-- **QAフラグ：** body_text_too_short
-
-| スコア | 値 |
-|--------|-----|
-| Importance     | ███████░░░ 78 |
-| Trust          | ██████████ 100 |
-| Risk（低=安全）| █░░░░░░░░░ 15 |
-| Freshness      | ██████████ 100 |
-| Expression Risk| ░░░░░░░░░░ 0 |
-
-- **Trust Category：** `primary`
-- **判定理由：** 全条件クリア
+> Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.
 
 ---
 
