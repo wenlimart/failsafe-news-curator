@@ -1,7 +1,7 @@
 # Failsafe News Curator
 フェイルセーフ型ニュースキュレーション基盤
 
-更新日時：2026-11-22 10:29 JST (01:29 UTC)
+更新日時：2026-11-23 10:54 JST (01:54 UTC)
 
 ---
 
@@ -9,22 +9,22 @@
 
 自動選別により、低リスク・一次情報・新鮮と判定された記事 1 件を掲載しています。
 
-### 2026-11-20
+### 2026-11-22
 
-- [Combatting adversarial distillation](https://openai.com/index/combatting-adversarial-distillation) — [OpenAI News](#article-index-combatting-adversarial-distillation)
+- [Perplexity and Intelligence](https://openai.com/index/perplexity-and-intelligence) — [OpenAI News](#article-index-perplexity-and-intelligence)
 
 [過去ログを見る](archive/)
 
 ---
 
-<a id="article-index-combatting-adversarial-distillation"></a>
+<a id="article-index-perplexity-and-intelligence"></a>
 
-### [Combatting adversarial distillation](https://openai.com/index/combatting-adversarial-distillation)
+### [Perplexity and Intelligence](https://openai.com/index/perplexity-and-intelligence)
 
 - **ソース：** OpenAI News（`official_blog`）
-- **公開日時：** 2026-11-20T10:00:00+00:00
-- **記事URL：** https://openai.com/index/combatting-adversarial-distillation
-- **一次ソース：** https://openai.com/index/combatting-adversarial-distillation（`official_blog`）
+- **公開日時：** 2026-11-22T00:00:00+00:00
+- **記事URL：** https://openai.com/index/perplexity-and-intelligence
+- **一次ソース：** https://openai.com/index/perplexity-and-intelligence（`official_blog`）
 
 | スコア | 値 |
 |--------|-----|
@@ -39,7 +39,7 @@
 
 **本文プレビュー：**
 
-> OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.
+> How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.
 
 ---
 
